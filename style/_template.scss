@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Roboto&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    width: 1920px;
+    @include _laptop {
+        width: 1024px;
+    }
+    @include _tablet {
+        width: 768px;
+    }
+    @include _mobile {
+        width: 320px;
+    }
+}
+section {
+    padding: 80px 260px;
+    border: none;
+    @include _laptop {
+        padding: 60px 40px;
+    }
+    @include _tablet {
+        padding: 40px;
+    }
+    @include _mobile {
+        padding: 40px 16px;
+    }
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+}
+
+%h1 {
+    @include font($font1, 68px, $colorw, 900);
+    line-height: 79px;
+    @include _tablet {
+        @include font($font1, 48px, $colorw, 900);
+        line-height: 56px;
+    }
+    @include _mobile {
+        @include font($font1, 32px, $colorw, 900);
+        line-height: 40px;
+    }
+}
+%stw {
+    @include font($font1, 38px, $colorw, 900);
+    line-height: 40px;
+    @include _laptop {
+        @include font($font1, 28px, $colorw, 900);
+        line-height: 36px;
+    }
+}
+%stb {
+    @include font($font1, 38px, $colorb, 900);
+    line-height: 40px;
+    @include _laptop {
+        @include font($font1, 28px, $colorb, 900);
+        line-height: 36px;
+    }
+}
+%trb {
+    @include font($font2, 20px, $colorb, 400);
+    line-height: 28px;
+    @include _laptop {
+        @include font($font2, 16px, $colorb, 400);
+        line-height: 24px;
+    }
+    @include _mobile {
+        @include font($font2, 16px, $colorb, 400);
+        line-height: 26px;
+    }
+}
+%tib {
+    @include font($font1, 20px, $colorb, 400);
+    line-height: 28px;
+    @include _laptop {
+        @include font($font1, 16px, $colorb, 400);
+        line-height: 24px;
+    }
+}
+%tiw {
+    @include font($font1, 20px, $colorw, 400);
+    line-height: 28px;
+    @include _laptop {
+        @include font($font1, 16px, $colorw, 400);
+        line-height: 24px;
+    }
+}
+%wtb {
+    @include font($font1, 26px, $colorw, 700);
+    line-height: 33.8px;
+    @include _laptop {
+        @include font($font1, 18px, $colorw, 700);
+        line-height: 26px;
+    }
+}
+%btn {
+    @include font($font1, 16px, $colorw, 700);
+    line-height: 24px;
+}
+%btn-top {
+    @include font($font1, 16px, $colorw, 700);
+}
+%rights {
+    @include font($font1, 16px, $colorg, 400);
+    line-height: 24px;
+}
+%subtitle {
+    @include font($font1, 20px, $colorg, 600);
+    line-height: 28px;
+    @include _laptop {
+        @include font($font1, 16px, $colorg, 600);
+        line-height: 24px;
+    }
+}
+%ph {
+    @include font($font1, 26px, $colorbl, 600);
+    line-height: 33.8px;
+    text-decoration-line: underline;
+    @include _laptop {
+        @include font($font1, 18px, $colorbl, 600);
+        line-height: 26px;
+    }
+}
+%inputblock {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    width: 560px;
+    height: 60px;
+    padding: 18px 49px 18px 32px;
+    align-items: center;
+    border-radius: 12px;
+    border: 2px solid $colorp;
+}
+%placeholder {
+    ::-webkit-input-placeholder {
+        @include font($font1, 16px, $colorp, 400);
+        line-height: 24px;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings:
+            "clig" off,
+            "liga" off;
+    }
+    :-moz-placeholder {
+        @include font($font1, 16px, $colorp, 400);
+        line-height: 24px;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings:
+            "clig" off,
+            "liga" off;
+    }
+    ::-moz-placeholder {
+        @include font($font1, 16px, $colorp, 400);
+        line-height: 24px;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings:
+            "clig" off,
+            "liga" off;
+    }
+    :-ms-input-placeholder {
+        @include font($font1, 16px, $colorp, 400);
+        line-height: 24px;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings:
+            "clig" off,
+            "liga" off;
+    }
+}

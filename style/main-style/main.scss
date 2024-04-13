@@ -1,0 +1,1291 @@
+@import "../vars";
+@import "../template";
+body {
+    max-width: 1920px;
+    display: grid;
+    grid-template-rows: 896px 1fr 894px;
+    @include _laptop {
+        max-width: 1024px;
+        grid-template-rows: 852px 1fr 855px;
+    }
+    @include _tablet {
+        max-width: 768px;
+        grid-template-rows: 832px 1fr 763px;
+    }
+    @include _mobile {
+        max-width: 320px;
+        grid-template-rows: 1002px 1fr 1432px;
+    }
+    header {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 96px 1fr;
+        background-image: url(../../assets/img-main/background_header.png);
+        backdrop-filter: blur(5px);
+        background-size: cover;
+        @include _laptop {
+            grid-template-rows: 80px 1fr;
+        }
+        @include _mobile {
+            grid-template-rows: 60px 1fr;
+        }
+    }
+    main {
+        display: grid;
+        grid-template-rows: 784px 790px 684px 906px;
+        @include _laptop {
+            grid-template-rows: 596px 683px 536px 698px;
+        }
+        @include _tablet {
+            grid-template-rows: 760px 743px 578px 678px;
+        }
+        @include _mobile {
+            grid-template-rows: 1148px 1402px 428px 979px;
+        }
+    }
+}
+header {
+    .header__top-wrapper {
+        display: grid;
+        grid-template-columns: 201px 756px 586px 377px;
+        @include _laptop {
+            grid-template-columns: 153.83px 1fr 1fr 375px;
+            background-color: $colorw;
+        }
+        @include _mobile {
+            grid-template-columns: 129.83px 1fr 1fr 95px;
+        }
+    }
+    .header__logo-wrapper {
+        padding: 24px 30px 24px 30px;
+        grid-area: 1/1/2/2;
+        @include _laptop {
+            padding: 24px 18px 24px 40px;
+        }
+        @include _mobile {
+            padding: 14px 40px 14px 16px;
+        }
+        .whlogo {
+            padding: 24px, 30px;
+            width: 170.743px;
+            height: 48px;
+            @include _laptop {
+                display: none;
+            }
+        }
+        .dlogo {
+            display: none;
+            @include _laptop {
+                display: block;
+                width: 113.829px;
+                height: 32px;
+            }
+        }
+    }
+    .header__nav {
+        padding: 0;
+        grid-area: 1/3/2/4;
+        display: flex;
+        @include flex(row, space-between, center);
+        @include _laptop {
+            display: none;
+        }
+        .nav__link {
+            line-height: 96px;
+            @include font($font1, 16px, $colorp, 500);
+        }
+        .link_active {
+            color: $colorw;
+            border-bottom: 4px solid $colorw;
+        }
+    }
+    .buttons {
+        padding: 24px 30px 24px 60px;
+        grid-area: 1/4/2/5;
+        display: flex;
+        @include flex(row, space-between, center);
+        gap: 24px;
+        @include _laptop {
+            padding: 0px 40px 0px 0px;
+        }
+        .buttons__connect {
+            width: 197px;
+            padding: 14px 0px;
+            border: 1px solid $colorw;
+            @extend %btn-top;
+            background-color: transparent;
+            border-radius: 12px;
+            @include _laptop {
+                color: $colorbl;
+                border: 1px solid $colorbl;
+            }
+            @include _mobile {
+                display: none;
+            }
+        }
+        .buttons__language {
+            width: 66px;
+            padding: 14px 0px;
+            border: 1px solid $colorp;
+            @extend %btn-top;
+            color: $colorp;
+            background-color: transparent;
+            border-radius: 12px;
+            @include _laptop {
+                color: $colorbl;
+            }
+            @include _mobile {
+                display: none;
+            }
+        }
+    }
+    .burger {
+        display: none;
+        @include _laptop {
+            display: block;
+        }
+    }
+    .header__bottom {
+        padding: 80px 260px;
+        display: grid;
+        grid-template-columns: 679px 680px;
+        gap: 40px;
+        @include _laptop {
+            padding: 39px 40px 81px 40px;
+            grid-template-columns: repeat(2, 462px);
+            gap: 20px;
+        }
+        @include _tablet {
+            padding: 40px;
+            grid-template-columns: repeat(2, 334px);
+        }
+        @include _mobile {
+            padding: 40px 16px 0 16px;
+            display: flex;
+            @include flex(column, space-between, flex-start);
+            gap: 20px;
+        }
+    }
+    .header__title-wrapper {
+        height: 350px;
+        padding-top: 145px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        @include _laptop {
+            height: 469px;
+            padding-top: 151px;
+        }
+        @include _tablet {
+            height: 404px;
+            padding-top: 173px;
+        }
+        @include _mobile {
+            height: 296px;
+            width: 299px;
+            padding: 0;
+            gap: 10px;
+        }
+    }
+    .header__title {
+        @extend %h1;
+        margin: 0;
+        @include _mobile {
+            width: 100%;
+        }
+    }
+    .header__smalltitle {
+        @extend %stw;
+        @include _mobile {
+            width: 100%;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    .header__text {
+        @extend %trb;
+        color: $colorw;
+        @include _mobile {
+            width: 299px;
+        }
+    }
+    .header__form {
+        width: 680px;
+        height: 640px;
+        @include _laptop {
+            width: 462px;
+            height: 652px;
+        }
+        @include _tablet {
+            width: 334px;
+            height: 672px;
+        }
+        @include _mobile {
+            width: 320px;
+            height: 566px;
+        }
+    }
+}
+.header__form {
+    padding: 60px;
+    border-radius: 13px;
+    background-color: $colorbl;
+    @extend %placeholder;
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 60px 60px 60px 60px 120px 60px;
+    @include _laptop {
+        gap: 12px;
+        grid-template-rows: 44px 60px 60px 60px 120px 128px;
+    }
+    @include _tablet {
+        padding: 40px;
+        grid-template-rows: 80px 60px 60px 60px 120px 152px;
+    }
+    @include _mobile {
+        padding: 40px 16px;
+        gap: 9px;
+        grid-template-rows: 47px 48px 48px 48px 120px 130px;
+    }
+    .questions__smalltitle {
+        grid-area: 1/1/2/2;
+        @extend %stw;
+        @include _mobile {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    .form-control_1 {
+        grid-area: 2/1/3/2;
+        @extend %inputblock;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 288px;
+            height: 48px;
+            padding: 12px 49px 12px 22px;
+        }
+    }
+    .form-control_2 {
+        grid-area: 3/1/4/2;
+        @extend %inputblock;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 288px;
+            height: 48px;
+            padding: 12px 49px 12px 22px;
+        }
+    }
+    .form__phone {
+        grid-area: 4/1/5/2;
+        display: flex;
+        align-items: center;
+        @extend %placeholder;
+        @extend %inputblock;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 288px;
+            height: 48px;
+            padding: 12px 49px 12px 22px;
+        }
+        .form__img {
+            height: 20px;
+            width: 36px;
+        }
+        .form-control_3 {
+            @extend %inputblock;
+            border: transparent;
+        }
+    }
+    .form-control_4 {
+        grid-area: 5/1/6/2;
+        @extend %inputblock;
+        height: 120px;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 288px;
+            padding: 12px 49px 12px 22px;
+        }
+    }
+    .form__btn {
+        display: flex;
+        width: 208px;
+        height: 60px;
+        padding: 18px 42px;
+        @include flex(row, center, center);
+        border-radius: 12px;
+        border: none;
+        background-color: $colorw;
+        @include font($font1, 16px, $colorbl, 700);
+        line-height: 24px;
+        @include _laptop {
+            width: 342px;
+            height: 60px;
+            padding: 18px 109px;
+        }
+        @include _tablet {
+            width: 254px;
+            height: 60px;
+            padding: 18px 65px;
+        }
+        @include _mobile {
+            width: 288px;
+            height: 48px;
+            padding: 18px 82px;
+        }
+        .form__arrow {
+            padding-left: 22px;
+        }
+    }
+    .form__item {
+        grid-area: 6/1/7/2;
+        display: flex;
+        @include flex(row, space-between, center);
+        @include _laptop {
+            @include flex(column, flex-start, flex-start);
+        }
+    }
+    .form__chbox-wrapper {
+        width: 332px;
+        gap: 10px;
+        display: flex;
+        @include flex(row, flex-start, center);
+        @include _laptop {
+            width: 332px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 288px;
+        }
+    }
+    .form__chbox {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        border-color: $colorp;
+        background-color: $colorbl;
+    }
+    .form__agr {
+        display: flex;
+        @include flex(column, flex-start, center);
+    }
+    .form__text {
+        @extend %rights;
+        color: $colorp;
+        margin: 0;
+    }
+    .textlink {
+        color: $colorp;
+        text-decoration: underline;
+    }
+}
+.principles {
+    display: flex;
+    background-image: url(../../assets/img-main/bck_2.png);
+    @include _mobile {
+        flex-direction: column;
+    }
+    .principles__img-wrapper {
+        width: 680px;
+        @include _laptop {
+            width: 462px;
+        }
+        @include _tablet {
+            width: 334px;
+            display: flex;
+            align-items: center;
+        }
+        @include _mobile {
+            width: 288px;
+        }
+    }
+    .principles__img {
+        width: 100%;
+    }
+    .principles__text-wrapper {
+        width: 719px;
+        padding-left: 39px;
+        display: flex;
+        @include flex(column, space-between, center);
+        @include _laptop {
+            width: 462px;
+            padding-left: 20px;
+        }
+        @include _tablet {
+            width: 334px;
+        }
+        @include _mobile {
+            width: 288px;
+            padding-left: 0;
+            gap: 20px;
+        }
+    }
+    .principles__smalltitle {
+        @extend %stb;
+        @include _mobile {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    .principles__text {
+        @extend %trb;
+    }
+    .principles__attention {
+        padding: 30px;
+        @extend %tib;
+        background-color: $bcg_y;
+        border-radius: 12px;
+        border: 1px solid $colorp;
+        @include _laptop {
+            padding: 16px;
+        }
+        @include _mobile {
+            padding: 20px;
+        }
+    }
+}
+.channels {
+    background-color: $colorb;
+    display: grid;
+    grid-template-rows: 160px 422px;
+    gap: 40px;
+    @include _laptop {
+        grid-template-rows: 144px 379px;
+    }
+    @include _tablet {
+        grid-template-rows: 180px 451px;
+        gap: 32px;
+    }
+    @include _mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .channels__smalltitle {
+        @extend %stw;
+        text-align: center;
+        @include _laptop {
+            width: 944px;
+            height: 144px;
+            font-size: 28px;
+            line-height: 36px;
+        }
+        @include _tablet {
+            width: 688px;
+            height: 180px;
+        }
+        @include _mobile {
+            width: 288px;
+            height: 384px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    .channels__container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+        @include _laptop {
+            gap: 20px;
+        }
+        @include _mobile {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+    .channels__block {
+        width: 680px;
+        height: 422px;
+        border-top: solid 1px $colorg;
+        display: grid;
+        grid-template-rows: 116px 34px 148px 60px;
+        gap: 24px;
+        @include _laptop {
+            width: 462px;
+            height: 379px;
+            grid-template-rows: 99px 26px 144px 60px;
+            gap: 12px;
+        }
+        @include _tablet {
+            width: 334px;
+            height: 451px;
+            grid-template-rows: 99px 26px 216px 60px;
+        }
+    }
+    .block-1 {
+        @include _mobile {
+            width: 288px;
+            height: 415px;
+            display: flex;
+            @include flex(column, space-between, flex-start);
+        }
+    }
+    .block-2 {
+        @include _mobile {
+            width: 288px;
+            height: 463px;
+            display: flex;
+            @include flex(column, space-between, flex-start);
+        }
+    }
+    .channels__text-bold {
+        @extend %wtb;
+    }
+    .channels__text {
+        height: 140px;
+        @extend %tiw;
+        @include _laptop {
+            height: 144px;
+        }
+        @include _tablet {
+            height: 216px;
+        }
+    }
+    .channels__icon-wrapper1 {
+        padding-top: 40px;
+        display: flex;
+        gap: 12px;
+        @include _laptop {
+            padding-top: 26px;
+        }
+        @include _laptop {
+            padding-top: 20px;
+        }
+    }
+    .channels__icon1 {
+        width: 75px;
+    }
+    .channels__icon-wrapper {
+        padding-top: 38px;
+        display: flex;
+        gap: 12px;
+        @include _laptop {
+            padding-top: 24px;
+        }
+    }
+    .channels__icon2 {
+        width: 57px;
+        height: 58px;
+    }
+    .channels__btn {
+        display: flex;
+        width: 279px;
+        height: 60px;
+        padding: 18px 30px 18px 40px;
+        @include flex(row, space-between, center);
+        border-radius: 12px;
+        border: none;
+        background-color: $colorbl;
+        @include font($font1, 16px, $colorw, 700);
+        line-height: 24px;
+        @include _mobile {
+            height: 48px;
+            padding: 12px 30px 12px 40px;
+        }
+    }
+}
+.results {
+    background-image: url(../../assets/img-main/bck_results.png);
+    display: grid;
+    grid-template-rows: 40px 28px 346px 40px;
+    gap: 24px;
+    @include _laptop {
+        grid-template-rows: 36px 24px 244px 40px;
+        gap: 24px;
+    }
+    @include _tablet {
+        grid-template-rows: 36px 24px 361px 40px;
+        gap: 12px;
+    }
+    @include _mobile {
+        grid-template-rows: 72px 28px 160px 40px;
+        gap: 16px;
+    }
+    .results__smalltitle {
+        @extend %stb;
+        text-align: center;
+        @include _laptop {
+            width: 920px;
+        }
+        @include _tablet {
+            width: 688px;
+        }
+        @include _mobile {
+            width: 288px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    .results__text {
+        @extend %tib;
+        text-align: center;
+        @include _laptop {
+            width: 920px;
+        }
+        @include _tablet {
+            width: 688px;
+        }
+        @include _mobile {
+            width: 288px;
+        }
+    }
+    .results__container {
+        width: 1400px;
+        display: grid;
+        grid-template-columns: repeat(4, 320px);
+        gap: 40px;
+        @include _laptop {
+            width: 940px;
+            grid-template-columns: repeat(4, 220px);
+            gap: 20px;
+        }
+        @include _tablet {
+            width: 686px;
+            grid-template-columns: repeat(2, 333px);
+            gap: 20px;
+        }
+        @include _mobile {
+            width: 290px;
+            grid-template-columns: repeat(2, 140px);
+            gap: 10px;
+        }
+    }
+    .wr-hide {
+        @include _tablet {
+            display: none;
+        }
+    }
+    .results__img {
+        width: 320px;
+        @include _laptop {
+            width: 220px;
+        }
+        @include _tablet {
+            width: 333px;
+        }
+        @include _mobile {
+            width: 140px;
+        }
+    }
+    .results__arrow-wrapper {
+        display: flex;
+        @include flex(row, space-between, center);
+        width: 1400px;
+        @include _laptop {
+            width: 940px;
+        }
+        @include _tablet {
+            width: 686px;
+        }
+        @include _mobile {
+            width: 290px;
+        }
+    }
+    .results__dots {
+        height: 10px;
+    }
+    .results__arrow {
+        cursor: pointer;
+    }
+}
+.clients {
+    height: 906px;
+    background-color: $colorw;
+    display: grid;
+    grid-template: 100px 242px 330px / 1400px;
+    @include _laptop {
+        grid-template: 76px 164px 278px / 944px;
+    }
+    @include _tablet {
+        grid-template: 68px 230px 274px / 688px;
+    }
+    @include _mobile {
+        grid-template: 104px 395px 368px / 288px;
+    }
+    .clients__smalltitle {
+        grid-area: 1/1/2/2;
+        display: flex;
+        @include flex(row, center, flex-start);
+        @extend %stb;
+    }
+    .clients__names {
+        grid-area: 2/1/3/2;
+    }
+    .clients__phone {
+        grid-area: 3/1/4/2;
+        margin-top: 80px;
+        display: grid;
+        grid-template: 100% / 619px 1fr;
+        background-color: $colorbl;
+        height: 324px;
+        border-bottom: 4px solid $colorw;
+        border-radius: 12px;
+        gap: 50px;
+        @include _laptop {
+            margin-top: 60px;
+            grid-template: 100% / 495px 336px;
+            height: 278px;
+            gap: 20px;
+        }
+        @include _tablet {
+            margin-top: 32px;
+            grid-template: 274px / 294px 269px;
+            height: 274px;
+            gap: 21px;
+        }
+        @include _mobile {
+            margin-top: 32px;
+            grid-template: 236px 36px / 100%;
+            height: 368px;
+            gap: 24px;
+        }
+    }
+}
+.clients__names {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(5, 1fr);
+    gap: 20px;
+    @include _tablet {
+        grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    @include _mobile {
+        grid-template: repeat(5, 1fr) / repeat(2, 1fr);
+    }
+    .clients__name-wrapper {
+        display: flex;
+        @include flex(row, center, center);
+        width: 260px;
+        height: 111px;
+        border-radius: 12px;
+        border: 2px solid $colorp;
+        cursor: pointer;
+        @include _laptop {
+            width: 173px;
+            height: 72px;
+        }
+        @include _tablet {
+            width: 164px;
+            height: 68px;
+        }
+        @include _mobile {
+            width: 139px;
+            height: 71px;
+        }
+    }
+    .clients__name {
+        height: 98%;
+    }
+    @include _tablet {
+        height: 80%;
+    }
+    @include _mobile {
+        height: 60%;
+        width: 90%;
+    }
+}
+.clients__phone {
+    .clients__text-wrapper {
+        grid-area: 1/1/2/2;
+    }
+    .clients__number-wrapper {
+        grid-area: 1/2/2/3;
+        @include _mobile {
+            grid-area: 2/1/3/2;
+        }
+    }
+}
+.clients__text-wrapper {
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include _tablet {
+        padding-left: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    @include _mobile {
+        padding-left: 20px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .clients__subtitle {
+        @extend %stw;
+        line-height: 46px;
+        @include _tablet {
+            font-size: 28px;
+            line-height: 36px;
+            width: 294px;
+        }
+        @include _mobile {
+            width: 249px;
+        }
+    }
+    .clients__text {
+        padding-top: 35px;
+        @include font($font1, 26px, $colorw, 400);
+        line-height: 130%;
+        @include _laptop {
+            padding-top: 24px;
+            @include font($font1, 18px, $colorw, 400);
+            line-height: 26px;
+        }
+        @include _mobile {
+            grid-area: 2/1/3/2;
+            padding-top: 18px;
+            @include font($font1, 16px, $colorw, 400);
+            line-height: 24px;
+        }
+    }
+}
+.clients__number-wrapper {
+    grid-area: 1/2/2/3;
+    display: flex;
+    @include flex(row, flex-start, center);
+    @include _mobile {
+        grid-area: 2/1/3/2;
+    }
+    .clients__number {
+        @include font($font1, 68px, $colorw, 700);
+        line-height: 79px;
+        text-decoration-line: underline;
+        @include _laptop {
+            @include font($font1, 40px, $colorw, 700);
+            line-height: 48px;
+        }
+        @include _tablet {
+            @include font($font1, 32px, $colorw, 700);
+            line-height: 40px;
+        }
+        @include _mobile {
+            @include font($font1, 28px, $colorw, 700);
+            line-height: 36px;
+            padding: 20px;
+            position: relative;
+            top: 30px;
+        }
+    }
+}
+footer {
+    grid-area: 3/1/4/2;
+    display: grid;
+    grid-template: 1fr 104px/1fr 1fr;
+    padding: 80px 260px 0px 260px;
+    background-image: url(../../assets/img-about/bg-img-footer.png);
+    @include _laptop {
+        grid-template: 1fr 104px/462px 462px;
+        padding: 60px 40px 0px 40px;
+        width: 1024px;
+    }
+    @include _tablet {
+        grid-template: 1fr 72px/1fr 1fr;
+        padding: 40px 40px 0px 40px;
+        width: 768px;
+        height: 763px;
+        overflow-y: auto;
+    }
+    @include _mobile {
+        height: 1432px;
+        width: 320px;
+        grid-template: 606px 690px 96px / 1fr;
+        padding: 40px 16px 0px 16px;
+        overflow-y: auto;
+        background-image: url(../../assets/img-about/mob-bg-img-footer.png);
+    }
+    .footer__container {
+        grid-area: 1/1/2/2;
+        @include _mobile {
+            grid-area: 2/1/3/2;
+        }
+    }
+    .questions {
+        grid-area: 1/2/2/3;
+        @include _mobile {
+            grid-area: 1/1/2/2;
+        }
+    }
+    .rights {
+        grid-area: 2/1/3/3;
+        width: 311px;
+        @extend %rights;
+        display: flex;
+        align-items: center;
+        @include _tablet {
+            height: 72px;
+        }
+        @include _mobile {
+            grid-area: 3/1/4/2;
+            width: 288px;
+            height: 96px;
+        }
+    }
+}
+.footer__container {
+    display: grid;
+    grid-template: 1fr 320px/680px;
+    @include _tablet {
+        grid-template: 1fr 219px/334px;
+    }
+    @include _mobile {
+        color: 402px 288px/288px;
+    }
+    .contacts {
+        grid-area: 1/1/2/2;
+        display: grid;
+        grid-template: 185px 1fr/1fr 1fr;
+        gap: 40px;
+        @include _laptop {
+            width: 462px;
+        }
+        @include _tablet {
+            grid-template: 190px 60px 80px /100%;
+            width: 334px;
+        }
+        @include _mobile {
+            grid-template: 175px 35px 14px /100%;
+            width: 288px;
+        }
+    }
+    .map {
+        grid-area: 2/1/3/2;
+        .map__item {
+            height: 320px;
+            width: 680px;
+            border-radius: 12px;
+            @include _laptop {
+                width: 462px;
+            }
+            @include _tablet {
+                width: 334px;
+                height: 219px;
+            }
+            @include _mobile {
+                width: 288px;
+                height: 288px;
+                margin-bottom: 96px;
+            }
+        }
+    }
+    .subtitle {
+        @extend %subtitle;
+    }
+}
+.contacts__tel {
+    grid-area: 1/1/2/3;
+    display: flex;
+    @include flex(column, space-between, flex-start);
+    width: 100%;
+    @include _laptop {
+        width: 462px;
+    }
+    @include _tablet {
+        grid-area: 1/1/2/2;
+    }
+    @include _mobile {
+        color: red;
+    }
+    .logo__img {
+        margin-bottom: 35px;
+        @include _tablet {
+            width: 213.134px;
+            height: 60px;
+        }
+        @include _mobile {
+            width: 113.829px;
+            height: 32px;
+            margin-top: 35px;
+        }
+    }
+    .tel__number {
+        display: flex;
+        @include flex(row, space-between, flex-start);
+        @extend %ph;
+        @include _tablet {
+            @include flex(column, flex-end, flex-start);
+        }
+    }
+    .tel__text-bold {
+        width: 360px;
+        @include _laptop {
+            width: 242px;
+        }
+        @include _mobile {
+            color: red;
+        }
+    }
+}
+.contacts__email {
+    grid-area: 2/1/3/2;
+    @include _tablet {
+        grid-area: 2/1/3/2;
+    }
+    .email__link {
+        @extend %trb;
+        color: $colorbl;
+        text-decoration-line: underline;
+    }
+}
+.contacts__address {
+    grid-area: 2/2/3/3;
+    @include _tablet {
+        grid-area: 3/1/4/2;
+        width: 300px;
+    }
+    .address__text {
+        @extend %tib;
+        font-weight: 600;
+    }
+}
+.questions__form-wrapper {
+    width: 680px;
+    height: 690px;
+    padding: 60px;
+    border-radius: 13px;
+    margin-left: 40px;
+    background-color: $colorbl;
+    @extend %placeholder;
+    @include _laptop {
+        width: 462px;
+        height: 691px;
+        margin-left: 20px;
+    }
+    @include _tablet {
+        width: 334px;
+        height: 651px;
+        margin-left: 20px;
+        padding: 40px;
+    }
+    @include _mobile {
+        width: 288px;
+        height: 606px;
+        margin-left: 0px;
+        padding: 40px 20px;
+    }
+}
+.questions__form {
+    grid-area: 1/2/2/3;
+    display: grid;
+    grid-template-rows: 44px 46px 60px 60px 60px 120px 60px;
+    gap: 20px;
+    @include _laptop {
+        grid-template-rows: 36px 24px 60px 60px 60px 120px 128px;
+        width: 342px;
+        height: 572px;
+        gap: 12px;
+    }
+    @include _tablet {
+        grid-template-rows: 36px 24px 60px 60px 60px 120px 152px;
+        width: 254px;
+        height: 572px;
+    }
+    @include _mobile {
+        grid-template-rows: 36px 24px 48px 48px 48px 120px 152px;
+        width: 254px;
+        height: 572px;
+        gap: 9px;
+    }
+    .questions__smalltitle {
+        grid-area: 1/1/2/2;
+        @extend %stw;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 248px;
+        }
+    }
+    .questions__text {
+        grid-area: 2/1/3/2;
+        @extend %tiw;
+        @include _laptop {
+            width: 342px;
+            margin-top: 4px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 248px;
+        }
+    }
+    .form-control_1 {
+        grid-area: 3/1/4/2;
+        @extend %inputblock;
+        @include _laptop {
+            width: 342px;
+            height: 60px;
+            padding: 18px 26px 18px 32px;
+            align-items: center;
+        }
+        @include _tablet {
+            width: 254px;
+            height: 60px;
+            padding: 18px 18px 18px 32px;
+        }
+        @include _mobile {
+            width: 248px;
+            height: 48px;
+            padding: 12px 15px 12px 22px;
+        }
+    }
+    .form-control_2 {
+        grid-area: 4/1/5/2;
+        @extend %inputblock;
+        @include _laptop {
+            width: 342px;
+            height: 60px;
+            padding: 18px 26px 18px 32px;
+            align-items: center;
+        }
+        @include _tablet {
+            width: 254px;
+            height: 60px;
+            padding: 18px 18px 18px 32px;
+        }
+        @include _mobile {
+            width: 248px;
+            height: 48px;
+            padding: 12px 15px 12px 22px;
+        }
+    }
+    .form__phone {
+        grid-area: 5/1/6/2;
+        display: flex;
+        align-items: center;
+        @extend %placeholder;
+        @extend %inputblock;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 248px;
+            height: 48px;
+        }
+        .form__img {
+            height: 20px;
+            width: 36px;
+        }
+        .form-control_3 {
+            @extend %inputblock;
+            border: transparent;
+            width: 342px;
+        }
+    }
+    .form-control_4 {
+        grid-area: 6/1/7/2;
+        @extend %inputblock;
+        height: 120px;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 248px;
+            padding: 12px 15px 12px 22px;
+        }
+    }
+    .form__btn {
+        display: flex;
+        width: 208px;
+        height: 60px;
+        padding: 18px 42px;
+        @include flex(row, center, center);
+        border-radius: 12px;
+        border: none;
+        background-color: $colorw;
+        @include font($font1, 16px, $colorbl, 700);
+        line-height: 24px;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+            height: 60px;
+            padding: 18px 65px;
+        }
+        @include _mobile {
+            width: 248px;
+            height: 48px;
+            padding: 18px 82px;
+        }
+        .form__arrow {
+            padding-left: 22px;
+        }
+    }
+    .form__item {
+        grid-area: 7/1/8/2;
+        display: flex;
+        @include flex(row, space-between, center);
+        @include _laptop {
+            @include flex(column, space-between, center);
+        }
+        @include _tablet {
+            @include flex(column, space-between, center);
+            width: 254px;
+        }
+        @include _mobile {
+            color: red;
+        }
+    }
+    .form__chbox-wrapper {
+        width: 332px;
+        gap: 10px;
+        display: flex;
+        @include flex(row, flex-start, center);
+        @include _tablet {
+            width: 254px;
+        }
+    }
+    .form__chbox {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        border-color: $colorp;
+        background-color: $colorbl;
+    }
+    .form__agr {
+        display: flex;
+        @include flex(column, flex-start, center);
+    }
+    .form__text {
+        @extend %rights;
+        color: $colorp;
+        margin: 0;
+    }
+    .textlink {
+        color: $colorp;
+        text-decoration: underline;
+    }
+}

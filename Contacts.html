@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contacts</title>
+        <link rel="stylesheet" href="./style/normalize.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./style/contacts-style/contacts.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__top-wrapper">
+                <div class="header__logo-wrapper">
+                    <img
+                        class="header__logo whlogo"
+                        src="./assets/img-common/logo-white.svg"
+                        alt="Company logo"
+                    />
+                    <img
+                        class="header__logo dlogo"
+                        src="./assets/img-common/logo.svg"
+                        alt="Dark Logo"
+                    />
+                </div>
+                <div class="header__nav nav">
+                    <a class="nav__link" href="./Main.html">Главная</a>
+                    <a class="nav__link" href="./About.html">О нас</a>
+                    <a class="nav__link" href="./Google.html">Google Adwords</a>
+                    <a class="nav__link link_active" href="./Contacts.html"
+                        >Контакты</a
+                    >
+                </div>
+                <div class="buttons">
+                    <div class="buttons__connect-wrapper">
+                        <button class="buttons__connect">
+                            Свяжитесь с нами
+                        </button>
+                    </div>
+                    <div class="buttons__language-wrapper">
+                        <button class="buttons__language">LV</button>
+                    </div>
+                    <div class="burger">
+                        <img
+                            class="burger__img"
+                            src="./assets/img-common/menu.svg"
+                            alt="burger"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="header__title-wrapper">
+                <h1 class="header__title">Наши контакты</h1>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <div class="contacts">
+                    <div class="contacts__tel tel">
+                        <div class="tel__subtitle-wrapper">
+                            <p class="tel__subtitle subtitle">Телефон</p>
+                        </div>
+                        <div class="tel__number">
+                            <div class="tel__text-bold">
+                                <a class="tel__link" href="#"
+                                    >+001 987-654-3210</a
+                                >
+                            </div>
+                            <div class="tel__text-bold">
+                                <a class="tel__link" href="#"
+                                    >+001 987-654-3210</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__email email">
+                        <div class="email__subtitle-wrapper">
+                            <p class="email__subtitle subtitle">Email</p>
+                        </div>
+                        <div class="email__link-wrapper">
+                            <a class="email__link" href="#">info@example.com</a>
+                        </div>
+                    </div>
+                    <div class="contacts__address address">
+                        <div class="address__subtitle-wrapper">
+                            <p class="address__subtitle subtitle">Адрес</p>
+                        </div>
+                        <div class="address__text">
+                            123/B, Route 66, Downtown, Washington, DC 20004, US
+                        </div>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe
+                        class="map__item"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10233.604569065163!2d24.145404180421995!3d56.942815851626705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eece2294c0a4df%3A0xe7cf69492c589454!2zTWF6xIEgTWF0xKtzYSBpZWxhIDc4LCBMYXRnYWxlcyBwcmlla8WhcGlsc8STdGEsIFLEq2dhLCBMVi0xMDA5LCDQm9Cw0YLQstC40Y8!5e0!3m2!1sru!2sru!4v1698355748267!5m2!1sru!2sru"
+                    ></iframe>
+                </div>
+            </div>
+            <div class="questions">
+                <div class="questions__form-wrapper">
+                    <form class="questions__form form" method="POST" action="#">
+                        <h2 class="questions__smalltitle">Есть вопросы?</h2>
+                        <div class="questions__text">Свяжитесь с нами</div>
+                        <input
+                            type="text"
+                            class="form-control_1 form__text"
+                            placeholder="Имя"
+                        />
+                        <input
+                            type="email"
+                            class="form-control_2 form__text"
+                            placeholder="Email"
+                        />
+                        <div class="form__phone">
+                            <img
+                                class="form__img"
+                                src="./assets/img-common/RU.svg"
+                                alt="RU flag"
+                            />
+                            <input
+                                type="tel"
+                                class="form-control_3 form__text"
+                                placeholder="+7 999 999-99-99"
+                            />
+                        </div>
+                        <textarea class="form-control_4 form__text" rows="3">
+Ваше сообщение</textarea
+                        >
+                        <div class="form__item">
+                            <div class="form__button-wrapper">
+                                <button class="form__btn">
+                                    Отправить
+                                    <img
+                                        class="form__arrow"
+                                        src="./assets/img-common/arow.svg"
+                                        alt="vector"
+                                    />
+                                </button>
+                            </div>
+                            <div class="form__chbox-wrapper">
+                                <input
+                                    class="form__chbox"
+                                    type="checkbox"
+                                    name="accepted"
+                                    value="accepted"
+                                />
+                                <div class="form__agr">
+                                    <p class="form__text">
+                                        Я прочитал и принимаю условия
+                                    </p>
+                                    <a class="form__text textlink" href="#"
+                                        >пользовательского соглашения</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="rights">
+                <p class="rights__text">
+                    SIA OL &#xa9; Visas tiesības aizsargātas 2021
+                </p>
+            </div>
+        </main>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

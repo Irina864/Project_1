@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Main</title>
+        <link rel="stylesheet" href="./style/normalize.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./style/main-style/main.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__top-wrapper">
+                <div class="header__logo-wrapper">
+                    <img
+                        class="header__logo whlogo"
+                        src="./assets/img-common/logo-white.svg"
+                        alt="Company logo"
+                    />
+                    <img
+                        class="header__logo dlogo"
+                        src="./assets/img-common/logo.svg"
+                        alt="Dark Logo"
+                    />
+                </div>
+                <div class="header__nav nav">
+                    <a class="nav__link link_active" href="./Main.html"
+                        >Главная</a
+                    >
+                    <a class="nav__link" href="./About.html">О нас</a>
+                    <a class="nav__link" href="./Google.html">Google Adwords</a>
+                    <a class="nav__link" href="./Contacts.html">Контакты</a>
+                </div>
+                <div class="buttons">
+                    <div class="buttons__connect-wrapper">
+                        <button class="buttons__connect">
+                            Свяжитесь с нами
+                        </button>
+                    </div>
+                    <div class="buttons__language-wrapper">
+                        <button class="buttons__language">LV</button>
+                    </div>
+                    <div class="burger">
+                        <img
+                            class="burger__img"
+                            src="./assets/img-common/menu.svg"
+                            alt="burger"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="header__title-wrapper">
+                    <div class="header__smalltitle">
+                        Мы помогаем малому бизнесу стартовать и меняться
+                    </div>
+                    <h1 class="header__title">Digital агентство ORA</h1>
+                    <p class="header__text">
+                        Объединяем ваш отраслевой опыт и нашу digital-экспертизу
+                        для достижения результатов
+                    </p>
+                </div>
+                <div class="header__form-wrapper">
+                    <form class="header__form form" method="POST" action="#">
+                        <h2 class="header__smalltitle">Свяжитесь с нами</h2>
+                        <input
+                            type="text"
+                            class="form-control_1 form__text"
+                            placeholder="Имя"
+                        />
+                        <input
+                            type="email"
+                            class="form-control_2 form__text"
+                            placeholder="Email"
+                        />
+                        <div class="form__phone">
+                            <img
+                                class="form__img"
+                                src="./assets/img-common/RU.svg"
+                                alt="RU flag"
+                            />
+                            <input
+                                type="tel"
+                                class="form-control_3 form__text"
+                                placeholder="+7 999 999-99-99"
+                            />
+                        </div>
+                        <textarea class="form-control_4 form__text" rows="3">
+              Ваше сообщение</textarea
+                        >
+                        <div class="form__item">
+                            <div class="form__button-wrapper">
+                                <button class="form__btn">
+                                    Отправить
+                                    <img
+                                        class="form__arrow"
+                                        src="./assets/img-common/arow.svg"
+                                        alt="vector"
+                                    />
+                                </button>
+                            </div>
+                            <div class="form__chbox-wrapper">
+                                <input
+                                    class="form__chbox"
+                                    type="checkbox"
+                                    name="accepted"
+                                    value="accepted"
+                                />
+                                <div class="form__agr">
+                                    <p class="form__text">
+                                        Я прочитал и принимаю условия
+                                    </p>
+                                    <a class="form__text textlink" href="#"
+                                        >пользовательского соглашения</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="principles">
+                <div class="principles__img-wrapper">
+                    <img
+                        class="principles__img"
+                        src="./assets/img-main/section2.png"
+                        alt="number1"
+                    />
+                </div>
+                <div class="principles__text-wrapper">
+                    <h2 class="principles__smalltitle">
+                        Наши принципы взаимоотношений с клиентами
+                    </h2>
+                    <div class="principles__text">
+                        Мы уверены, что главное в партнерских взаимоотношениях –
+                        доверие и результат, который измеряется достижением
+                        поставленных целей, способствующих росту бизнеса
+                        клиента. Отличные показатели – это цифры, которые
+                        наглядно показывают насколько мы приблизились к цели.
+                    </div>
+                    <div class="principles__attention">
+                        Такой подход предполагает неминуемый успех. Работа с
+                        показателями эффективности, определение точек роста и
+                        приоритетных направлений развития – вот наша стратегия
+                        успеха.
+                    </div>
+                    <div class="principles__text">
+                        Мы не будем рисовать несбыточные прогнозы и использовать
+                        «мёртвые» каналы, потому что отчитываемся перед клиентом
+                        за итоговые показатели. Если у вас все отлично, то мы
+                        так и скажем, прямо и без лишних слов.
+                    </div>
+                </div>
+            </section>
+            <section class="channels">
+                <h2 class="channels__smalltitle">
+                    Мы не будем рисовать несбыточные прогнозы и использовать
+                    «мёртвые» каналы, потому что отчитываемся перед клиентом за
+                    итоговые показатели. Если у вас все отлично, то мы так и
+                    скажем, прямо и без лишних слов.
+                </h2>
+                <div class="channels__container">
+                    <div class="channels__block block-1">
+                        <div class="channels__icon-wrapper1">
+                            <img
+                                class="channels__icon1"
+                                src="./assets/img-main/google.png"
+                                alt="icon1"
+                            />
+                        </div>
+                        <div class="channels__text-bold">Реклама в Google</div>
+                        <div class="channels__text">
+                            Наше агентство занимается разработкой и внедрением
+                            стратегий таргетированной и контекстной рекламы в
+                            Google. Мы помогаем малому бизнесу в Латвии наладить
+                            бесперебойный поток коммерческих сообщений до
+                            целевой аудитории.
+                        </div>
+                        <div class="channels__btn-wrapper">
+                            <button class="channels__btn">
+                                Подробнее об услуге
+                                <img
+                                    src="./assets/img-main/Vector_w.png"
+                                    alt="vector"
+                                />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="channels__block block-2">
+                        <div class="channels__icon-wrapper">
+                            <div class="channels__icon2">
+                                <img
+                                    src="./assets/img-main/Group.png"
+                                    alt="icon2"
+                                />
+                            </div>
+                            <div class="channels__icon2">
+                                <img
+                                    src="./assets/img-main/inst.png"
+                                    alt="icon2"
+                                />
+                            </div>
+                        </div>
+                        <div class="channels__text-bold">
+                            Реклама в Facebook, Instagram
+                        </div>
+                        <div class="channels__text">
+                            Мы предлагаем помощь каждому заказчику, желающему
+                            воспользоваться поддержкой профессиональных
+                            специалистов в сфере SMM-продвижения.
+                            Таргетированная реклама в Facebook и Instagram - это
+                            отличная возможность рассказать о собственном
+                            бизнесе как можно большему количеству людей.
+                        </div>
+                        <button class="channels__btn">
+                            Подробнее об услуге
+                            <img
+                                src="./assets/img-main/Vector_w.png"
+                                alt="vector"
+                            />
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="results">
+                <div class="results__smalltitle">Наши последние работы</div>
+                <div class="results__text">От задачи к результату</div>
+                <div class="results__container">
+                    <div class="results__img-wrapper wr-hide">
+                        <img
+                            class="results__img"
+                            src="./assets/img-main/section4_1.png"
+                            alt="Result1"
+                        />
+                    </div>
+                    <div class="results__img-wrapper">
+                        <img
+                            class="results__img"
+                            src="./assets/img-main/section4_2.png"
+                            alt="Result2"
+                        />
+                    </div>
+                    <div class="results__img-wrapper">
+                        <img
+                            class="results__img"
+                            src="./assets/img-main/section4_3.png"
+                            alt="Result3"
+                        />
+                    </div>
+                    <div class="results__img-wrapper wr-hide">
+                        <img
+                            class="results__img"
+                            src="./assets/img-main/section4_4.png"
+                            alt="Result4"
+                        />
+                    </div>
+                </div>
+                <div class="results__arrow-wrapper">
+                    <img
+                        class="results__arrow"
+                        src="./assets/img-main/arr_l.png"
+                        alt="Click left"
+                    />
+                    <img
+                        class="results__dots"
+                        src="./assets/img-main/car.png"
+                        alt="Carousel"
+                    />
+                    <img
+                        class="results__arrow"
+                        src="./assets/img-main/arr_r.png"
+                        alt="Click right"
+                    />
+                </div>
+            </section>
+            <section class="clients">
+                <h2 class="clients__smalltitle">
+                    Клиенты, которые нам доверяют​
+                </h2>
+                <div class="clients__names">
+                    <div class="clients__name-wrapper">
+                        <img
+                            class="clients__name cld"
+                            src="./assets/img-about/client-1.svg"
+                            alt="Airtable"
+                        />
+                    </div>
+                    <div class="clients__name-wrapper">
+                        <img
+                            class="clients__name"
+                            src="./assets/img-about/client-2.svg"
+                            alt="Crunchbase"
+                        />
+                    </div>
+                    <div class="clients__name-wrapper">
+                        <img
+                            class="clients__name"
+                            src="./assets/img-about/client-3.svg"
+                            alt="Hopwork"
+                        />
+                    </div>
+                    <div class="clients__name-wrapper">
+                        <img
+                            class="clients__name"
+                            src="./assets/img-about/client-4.svg"
+                            alt="Amazon"
+                        />
+                    </div>
+                    <div class="clients__name-wrapper">
+                        <img
+                            class="clients__name"
+                            src="./assets/img-about/client-5.svg"
+                            alt="Outreach"
+                        />
+                    </div>
+                    <div class="clients__name-wrapper">
+                        <img
+                            class="clients__name"
+                            src="./assets/img-about/client-6.svg"
+                            alt="Salesforce"
+                        />
+                    </div>
+                    <div class="clients__name-wrapper">
+                        <img
+                            class="clients__name"
+                            src="./assets/img-about/client-7.svg"
+                            alt="Contentsquare"
+                        />
+                    </div>
+                    <div class="clients__name-wrapper">
+                        <img
+                            class="clients__name cld"
+                            src="./assets/img-about/client-8.svg"
+                            alt="Hubspot"
+                        />
+                    </div>
+                    <div class="clients__name-wrapper">
+                        <img
+                            class="clients__name"
+                            src="./assets/img-about/client-9.svg"
+                            alt="Zendesk"
+                        />
+                    </div>
+                    <div class="clients__name-wrapper">
+                        <img
+                            class="clients__name"
+                            src="./assets/img-about/client-10.svg"
+                            alt="Airbnb"
+                        />
+                    </div>
+                </div>
+                <div class="clients__phone">
+                    <div class="clients__text-wrapper">
+                        <h2 class="clients__subtitle">
+                            Хотите чтобы мы поучаствовали в развитии Вашего
+                            проекта?
+                        </h2>
+                        <p class="clients__text">Просто позвоните нам!</p>
+                    </div>
+                    <div class="clients__number-wrapper">
+                        <a class="clients__number">&plus;371 0000 0000</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="contacts">
+                    <div class="contacts__tel tel">
+                        <div class="logo">
+                            <img
+                                class="logo__img"
+                                src="./assets/img-common/logo-bs.svg"
+                                alt="Logo"
+                            />
+                        </div>
+                        <div class="tel__subtitle-wrapper">
+                            <p class="tel__subtitle subtitle">Телефон</p>
+                        </div>
+                        <div class="tel__number">
+                            <div class="tel__text-bold">
+                                <a class="tel__link" href="#"
+                                    >+001 987-654-3210</a
+                                >
+                            </div>
+                            <div class="tel__text-bold">
+                                <a class="tel__link" href="#"
+                                    >+001 987-654-3210</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__email email">
+                        <div class="email__subtitle-wrapper">
+                            <p class="email__subtitle subtitle">Email</p>
+                        </div>
+                        <div class="email__link-wrapper">
+                            <a class="email__link" href="#">info@example.com</a>
+                        </div>
+                    </div>
+                    <div class="contacts__address address">
+                        <div class="address__subtitle-wrapper">
+                            <p class="address__subtitle subtitle">Адрес</p>
+                        </div>
+                        <div class="address__text">
+                            123/B, Route 66, Downtown, Washington, DC 20004, US
+                        </div>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe
+                        class="map__item"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10233.604569065163!2d24.145404180421995!3d56.942815851626705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eece2294c0a4df%3A0xe7cf69492c589454!2zTWF6xIEgTWF0xKtzYSBpZWxhIDc4LCBMYXRnYWxlcyBwcmlla8WhcGlsc8STdGEsIFLEq2dhLCBMVi0xMDA5LCDQm9Cw0YLQstC40Y8!5e0!3m2!1sru!2sru!4v1698355748267!5m2!1sru!2sru"
+                    ></iframe>
+                </div>
+            </div>
+            <div class="questions">
+                <div class="questions__form-wrapper">
+                    <form class="questions__form form" method="POST" action="#">
+                        <h2 class="questions__smalltitle">Есть вопросы?</h2>
+                        <div class="questions__text">Свяжитесь с нами</div>
+                        <input
+                            type="text"
+                            class="form-control_1 form__text"
+                            placeholder="Имя"
+                        />
+                        <input
+                            type="email"
+                            class="form-control_2 form__text"
+                            placeholder="Email"
+                        />
+                        <div class="form__phone">
+                            <img
+                                class="form__img"
+                                src="./assets/img-common/RU.svg"
+                                alt="RU flag"
+                            />
+                            <input
+                                type="tel"
+                                class="form-control_3 form__text"
+                                placeholder="+7 999 999-99-99"
+                            />
+                        </div>
+                        <textarea class="form-control_4 form__text" rows="3">
+Ваше сообщение</textarea
+                        >
+                        <div class="form__item">
+                            <div class="form__button-wrapper">
+                                <button class="form__btn">
+                                    Отправить
+                                    <img
+                                        class="form__arrow"
+                                        src="./assets/img-common/arow.svg"
+                                        alt="vector"
+                                    />
+                                </button>
+                            </div>
+                            <div class="form__chbox-wrapper">
+                                <input
+                                    class="form__chbox"
+                                    type="checkbox"
+                                    name="accepted"
+                                    value="accepted"
+                                />
+                                <div class="form__agr">
+                                    <p class="form__text">
+                                        Я прочитал и принимаю условия
+                                    </p>
+                                    <a class="form__text textlink" href="#"
+                                        >пользовательского соглашения</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="rights">
+                <p class="rights__text">
+                    SIA OL &#xa9; Visas tiesības aizsargātas 2021
+                </p>
+            </div>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

@@ -1,0 +1,1436 @@
+@import "../vars";
+@import "../template";
+li {
+    list-style-type: none;
+}
+body {
+    max-width: 1920px;
+    display: grid;
+    grid-template-rows: 496px 1fr 894px;
+    @include _laptop {
+        grid-template-rows: 496px 1fr 855px;
+    }
+    @include _tablet {
+        grid-template-rows: 340px 1fr 763px;
+    }
+    @include _mobile {
+        grid-template-rows: 320px 1fr 1432px;
+    }
+    header {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 96px 1fr;
+        background-image: url(../../assets/img-google/bcg_header.png);
+        @include _laptop {
+            grid-template-rows: 80px 1fr;
+        }
+        @include _mobile {
+            grid-template-rows: 60px 1fr;
+        }
+    }
+    main {
+        display: grid;
+        grid-template-rows: 789px 496px 1305px 2600px 682px 1046px 560px 906px;
+        @include _laptop {
+            grid-template-rows: 613px 408px 1094px 2045px 562px 848px 470px 698px;
+        }
+        @include _tablet {
+            grid-template-rows: 414px 384px 1134px 2036px 634px 612px 464px 678px;
+        }
+        @include _mobile {
+            grid-template-rows: 1203px 604px 1720px 2499px 552px 514px 766px 979px;
+        }
+    }
+}
+header {
+    .header__top-wrapper {
+        display: grid;
+        grid-template-columns: 201px 756px 586px 377px;
+        @include _laptop {
+            grid-template-columns: 153.83px 1fr 1fr 375px;
+            background-color: $colorw;
+        }
+        @include _mobile {
+            grid-template-columns: 129.83px 1fr 1fr 95px;
+        }
+    }
+    .header__logo-wrapper {
+        padding: 24px 30px 24px 30px;
+        grid-area: 1/1/2/2;
+        @include _laptop {
+            padding: 24px 18px 24px 40px;
+        }
+        @include _mobile {
+            padding: 14px 40px 14px 16px;
+        }
+        .whlogo {
+            padding: 24px, 30px;
+            width: 170.743px;
+            height: 48px;
+            @include _laptop {
+                display: none;
+            }
+        }
+        .dlogo {
+            display: none;
+            @include _laptop {
+                display: block;
+                width: 113.829px;
+                height: 32px;
+            }
+        }
+    }
+    .header__nav {
+        padding: 0;
+        grid-area: 1/3/2/4;
+        display: flex;
+        @include flex(row, space-between, center);
+        @include _laptop {
+            display: none;
+        }
+        .nav__link {
+            line-height: 96px;
+            @include font($font1, 16px, $colorp, 500);
+        }
+        .link_active {
+            color: $colorw;
+            border-bottom: 4px solid $colorw;
+        }
+    }
+    .buttons {
+        padding: 24px 30px 24px 60px;
+        grid-area: 1/4/2/5;
+        display: flex;
+        @include flex(row, space-between, center);
+        gap: 24px;
+        .buttons__connect {
+            width: 197px;
+            padding: 14px 0px;
+            border: 1px solid $colorw;
+            @extend %btn-top;
+            background-color: transparent;
+            border-radius: 12px;
+            @include _laptop {
+                color: $colorbl;
+                border: 1px solid $colorbl;
+            }
+            @include _mobile {
+                display: none;
+            }
+        }
+        .buttons__language {
+            width: 66px;
+            padding: 14px 0px;
+            border: 1px solid $colorp;
+            @extend %btn-top;
+            color: $colorp;
+            background-color: transparent;
+            border-radius: 12px;
+            @include _laptop {
+                color: $colorbl;
+            }
+            @include _mobile {
+                display: none;
+            }
+        }
+    }
+    .burger {
+        display: none;
+        @include _laptop {
+            display: block;
+        }
+    }
+    .header__title-wrapper {
+        width: 560px;
+        height: 214px;
+        margin-left: 261px;
+        margin-top: 93px;
+        @include _laptop {
+            margin-left: 40px;
+            margin-top: 101px;
+        }
+        @include _tablet {
+            margin-top: 48px;
+            height: 164px;
+        }
+        @include _mobile {
+            margin-left: 16px;
+            margin-top: 40px;
+            height: 156px;
+            width: 288px;
+        }
+    }
+    .header__title {
+        @extend %h1;
+        margin: 0;
+    }
+    .header__text {
+        margin-top: 28px;
+        @extend %trb;
+        color: $colorw;
+    }
+}
+.advertising {
+    padding-bottom: 55px;
+    padding-top: 54px;
+    @include _laptop {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+    @include _tablet {
+        padding-bottom: 0px;
+        padding-top: 40px;
+    }
+    @include _mobile {
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    background-image: url(../../assets/img-google/Rectangle2.jpg);
+    display: flex;
+    .advertising__img-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .advertising__img {
+        width: 680px;
+        @include _laptop {
+            width: 462px;
+        }
+        @include _tablet {
+            width: 334px;
+        }
+        @include _mobile {
+            width: 288px;
+        }
+    }
+    .advertising__text-wrapper {
+        display: flex;
+        @include flex(column, space-between, flex-start);
+        padding: 63px 0px 61px 40px;
+        @include _laptop {
+            width: 462px;
+            height: 493px;
+            padding: 0;
+        }
+        @include _tablet {
+            width: 314px;
+            height: 374px;
+            overflow-y: auto;
+            padding: 0;
+        }
+        @include _mobile {
+            width: 288px;
+            height: 815px;
+            overflow-y: hidden;
+            padding: 0;
+        }
+    }
+    .advertising__text-bold {
+        @extend %wtb;
+        color: $colorb;
+        @include _laptop {
+            width: 462px;
+        }
+        @include _tablet {
+            width: 314px;
+        }
+        @include _mobile {
+            width: 288px;
+        }
+    }
+    .advertising__attention-wrapper {
+        width: 680px;
+        height: 133px;
+        padding: 30px;
+        display: flex;
+        gap: 40px;
+        background-color: $bcg_y;
+        @include flex(row, space-between, center);
+        border-radius: 12px;
+        border: 1px solid $colorp;
+        @include _laptop {
+            width: 462px;
+            height: 139px;
+            padding: 16px;
+            gap: 24px;
+        }
+        @include _tablet {
+            width: 314px;
+            height: 187px;
+        }
+        @include _mobile {
+            width: 288px;
+            height: 220px;
+            gap: 20px;
+            flex-direction: column;
+        }
+    }
+    .advertising__attention {
+        @extend %tib;
+    }
+    .advertising__icon {
+        height: 73px;
+    }
+    .advertising__text {
+        @extend %trb;
+    }
+}
+
+.search {
+    display: grid;
+    grid-template: 40px 240px / repeat(4, 320px);
+    gap: 40px;
+    @include _laptop {
+        grid-template: 36px 212px / repeat(4, 221px);
+        gap: 20px;
+    }
+    @include _tablet {
+        grid-template: 36px 236px / repeat(4, 157px);
+    }
+    @include _mobile {
+        grid-template: 108px 176px 176px / repeat(2, 139px);
+        gap: 10px;
+    }
+    .search__smalltitle {
+        grid-area: 1/1/2/5;
+        text-align: center;
+        @extend %stb;
+        @include _mobile {
+            grid-area: 1/1/2/3;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    .search__block {
+        width: 320px;
+        padding-top: 20px;
+        display: flex;
+        @include flex(column, space-between, center);
+        @include _laptop {
+            width: 221px;
+        }
+        @include _tablet {
+            width: 157px;
+        }
+        @include _mobile {
+            width: 139px;
+        }
+    }
+    .bl1 {
+        grid-area: 2/1/3/2;
+    }
+    .bl2 {
+        grid-area: 2/2/3/3;
+        @include _mobile {
+            grid-area: 2/2/3/3;
+        }
+    }
+    .bl3 {
+        grid-area: 2/3/3/4;
+        @include _mobile {
+            grid-area: 3/1/4/2;
+        }
+    }
+    .bl4 {
+        grid-area: 2/4/3/5;
+        @include _mobile {
+            grid-area: 3/2/4/3;
+        }
+    }
+    .search__img-wrapper {
+        padding: 30px;
+        @include _mobile {
+            padding: 6px;
+        }
+    }
+    .search__img {
+        width: 60px;
+        height: 60px;
+        @include _mobile {
+            width: 48px;
+            height: 48px;
+        }
+    }
+    .search__text {
+        text-align: center;
+        @extend %tib;
+        font-weight: 700;
+    }
+}
+.prices {
+    background-image: url(../../assets/img-google/Rectangle3.jpg);
+    display: grid;
+    grid-template-rows: 40px 865px 120px;
+    gap: 60px;
+
+    .prices__icon {
+        margin-top: -45px;
+        margin-left: 308px;
+    }
+    .prices__wrapper {
+        display: grid;
+        grid-template-rows: 46px 28px 28px;
+    }
+    .prices__smalltitle {
+        text-align: center;
+        @extend %stb;
+    }
+    .prices__container {
+        display: grid;
+        grid-template-columns: repeat(3, 440px);
+        gap: 40px;
+    }
+    .prices__subtitle {
+        @extend %wtb;
+        color: $colorb;
+    }
+    .prices__text {
+        @extend %tib;
+    }
+    .prices__text-bold {
+        @extend %tib;
+        font-weight: 700;
+    }
+    .list-bold {
+        @extend %tib;
+        font-weight: 700;
+    }
+    .prices__list {
+        width: 360px;
+        @extend %tib;
+        padding: 0;
+    }
+    li {
+        height: 54px;
+        vertical-align: middle;
+        &:nth-child(odd) {
+            background-color: $colorp;
+        }
+    }
+    .prices__empty {
+        height: 165px;
+    }
+    .prices__block {
+        height: 854px;
+        display: grid;
+        grid-template-rows: 0px 120px 610px 60px;
+        border-radius: 12px;
+        border: 1px solid $colorp;
+        background-color: $colorw;
+        padding: 40px;
+    }
+    .prices__btn {
+        display: flex;
+        width: 238px;
+        height: 60px;
+        padding: 18px 30px 18px 40px;
+        @include flex(row, space-between, center);
+        border-radius: 12px;
+        border: none;
+        background-color: $colorbl;
+        @include font(Inter, 16px, $colorw, 700);
+        line-height: 24px;
+    }
+    .prices__bottom {
+        width: 1399px;
+        height: 120px;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 40px 666px;
+        gap: 20px;
+        background-color: $bcg_g;
+        border-radius: 12px;
+        border: 1px solid $colorp;
+    }
+    .prices.info {
+        width: 40px;
+        height: 40px;
+    }
+}
+.types {
+    display: grid;
+    grid-template-rows: 40px 2260px;
+    gap: 60px;
+    @include _laptop {
+        grid-template-rows: 36px 1849px;
+        gap: 40px;
+    }
+    @include _tablet {
+        grid-template-rows: 36px 1888px;
+        gap: 32px;
+    }
+    @include _mobile {
+        grid-template-rows: 36px 2324px;
+    }
+    .types__smalltitle {
+        text-align: center;
+        @extend %stb;
+        @include _laptop {
+            width: 588px;
+        }
+        @include _tablet {
+            width: 420px;
+        }
+        @include _mobile {
+            width: 288px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    .types__container {
+        display: grid;
+        grid-template-rows: 500px 500px 500px 600px;
+        gap: 80px;
+        @include _laptop {
+            grid-template-rows: 394px 418px 340px 548px;
+            gap: 50px;
+        }
+        @include _tablet {
+            grid-template-rows: 466px 466px 240px 620px;
+            gap: 32px;
+        }
+        @include _mobile {
+            grid-template-rows: 406px 415px 390px 969px;
+        }
+    }
+    .types__block {
+        display: flex;
+        @include _laptop {
+            gap: 20px;
+        }
+        @include _mobile {
+            flex-direction: column;
+            gap: 32px;
+            &:nth-child(odd) {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    .types__item {
+        display: grid;
+        @include _laptop {
+            width: 382px;
+        }
+        @include _tablet {
+            width: 334px;
+        }
+        @include _mobile {
+            width: 288px;
+            overflow-y: auto;
+        }
+    }
+    .item1 {
+        grid-template-rows: 58px 328px;
+        padding: 55px 42px 57px 0px;
+        @include _laptop {
+            grid-template-rows: 38px 1fr;
+            padding: 0;
+        }
+        @include _tablet {
+            grid-template-rows: 26px 1fr;
+            padding: 0;
+        }
+    }
+    .item2 {
+        grid-template-rows: 58px 356px;
+        padding: 43px 0px 43px 41px;
+        @include _laptop {
+            grid-template-rows: 38px 1fr;
+            padding: 0;
+        }
+        @include _tablet {
+            grid-template-rows: 26px 1fr;
+            padding: 0;
+        }
+    }
+    .item3 {
+        grid-template-rows: 58px 178px;
+        padding: 132px 41px 134px 0px;
+        @include _laptop {
+            grid-template-rows: 38px 1fr;
+            padding: 0;
+        }
+        @include _tablet {
+            grid-template-rows: 26px 1fr;
+            padding: 0;
+        }
+    }
+    .item4 {
+        grid-template-rows: 58px 534px;
+        padding-left: 30px;
+        @include _laptop {
+            grid-template-rows: 38px 1fr;
+            padding: 0;
+        }
+        @include _tablet {
+            grid-template-rows: 26px 1fr;
+            padding: 0;
+        }
+    }
+    .types__text-wrapper {
+        display: flex;
+        @include flex(column, flex-start, flex-start);
+    }
+    .types__text-bold {
+        @extend %wtb;
+        color: $colorb;
+    }
+    .types__text {
+        @extend %tib;
+    }
+    .types__block-img {
+        display: flex;
+        align-items: flex-start;
+    }
+    .types__img {
+        @include _laptop {
+            width: 542px;
+        }
+        @include _tablet {
+            width: 335px;
+        }
+        @include _mobile {
+            width: 288px;
+        }
+    }
+}
+.offer {
+    display: grid;
+    grid-template-rows: 40px 422px;
+    gap: 60px;
+    @include _laptop {
+        grid-template-rows: 36px 366px;
+        gap: 40px;
+    }
+    @include _tablet {
+        grid-template-rows: 36px 486px;
+        gap: 32px;
+    }
+    @include _mobile {
+        grid-template-rows: 72px 368px;
+    }
+    background-color: $colort;
+    .offer__smalltitle {
+        text-align: center;
+        @extend %stw;
+        @include _laptop {
+            width: 944px;
+        }
+        @include _tablet {
+            width: 688px;
+        }
+        @include _mobile {
+            width: 288px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    .offer__container {
+        display: grid;
+        grid-template-columns: repeat(4, 320px);
+        gap: 40px;
+        @include _laptop {
+            grid-template-columns: repeat(4, 221px);
+            gap: 20px;
+        }
+        @include _tablet {
+            grid-template-columns: repeat(4, 157px);
+        }
+        @include _mobile {
+            width: 288px;
+        }
+    }
+    .offer__block {
+        display: flex;
+        @include flex(column, flex-start, flex-start);
+        border-top: 1px solid $colorg;
+    }
+    .block2 {
+        @include _mobile {
+            display: none;
+        }
+    }
+    .block3 {
+        @include _mobile {
+            display: none;
+        }
+    }
+    .block4 {
+        @include _mobile {
+            display: none;
+        }
+    }
+    .offer__img-wrapper {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .offer__img {
+        width: 60px;
+        height: 60px;
+    }
+    .offer__text-wrapper {
+        display: flex;
+        @include flex(column, flex-start, flex-start);
+    }
+    .offer__text-bold {
+        @extend %wtb;
+        font-weight: 700;
+    }
+    .offer__text {
+        @extend %tiw;
+    }
+    .offer__arrow-wrapper {
+        display: none;
+        @include _mobile {
+            display: flex;
+            @include flex(row, space-between, center);
+            width: 290px;
+        }
+    }
+    .offer__dots {
+        height: 10px;
+    }
+    .offer__arrow {
+        cursor: pointer;
+    }
+}
+.stages {
+    display: grid;
+    grid-template-rows: 100px 786px;
+    @include _laptop {
+        grid-template-rows: 36px 652px;
+        gap: 40px;
+    }
+    @include _tablet {
+        grid-template-rows: 38px 422px 40px;
+    }
+    @include _mobile {
+        grid-template-rows: 36px 326px 40px;
+    }
+    .stages__smalltitle {
+        text-align: center;
+        @extend %stb;
+        @include _laptop {
+            width: 944px;
+        }
+        @include _tablet {
+            width: 688px;
+        }
+        @include _mobile {
+            width: 288px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    .stages__container {
+        display: grid;
+        grid-template: 383px 363px / repeat(3, 440px);
+        gap: 40px;
+        @include _laptop {
+            grid-template: 306px 306px / repeat(3, 301px);
+        }
+        @include _tablet {
+            grid-template-columns: repeat(3, 216px);
+        }
+        @include _mobile {
+            width: 288px;
+        }
+    }
+    .stages__block {
+        height: 363px;
+        display: grid;
+        grid-template-rows: 140px 34px 189px;
+        @include _laptop {
+            height: 366px;
+            grid-template-rows: 110px 26px 216px;
+        }
+        @include _tablet {
+            height: 446px;
+            grid-template-rows: 70px 52px 312px;
+        }
+        @include _mobile {
+            height: 486px;
+            grid-template-rows: 100px 26px 282px;
+        }
+    }
+    .blk1 {
+        grid-area: 1/1/2/2;
+        @include _tablet {
+            grid-area: 1/1/2/2;
+        }
+        @include _mobile {
+            width: 288px;
+        }
+    }
+    .blk2 {
+        grid-area: 1/2/2/3;
+        @include _tablet {
+            grid-area: 1/2/2/3;
+        }
+        @include _mobile {
+            display: none;
+        }
+    }
+    .blk3 {
+        grid-area: 1/3/2/4;
+        @include _tablet {
+            grid-area: 1/3/2/4;
+        }
+        @include _mobile {
+            display: none;
+        }
+    }
+    .blk4 {
+        grid-area: 2/1/3/2;
+        @include _tablet {
+            display: none;
+        }
+    }
+    .blk5 {
+        grid-area: 2/2/3/3;
+        @include _tablet {
+            display: none;
+        }
+    }
+    .blk6 {
+        grid-area: 2/3/3/4;
+        @include _tablet {
+            display: none;
+        }
+    }
+    .stages__arrow-wrapper {
+        display: none;
+        @include _tablet {
+            display: flex;
+            @include flex(row, space-between, center);
+            width: 100%;
+        }
+    }
+    .stages__dots {
+        height: 10px;
+    }
+    .stages__arrow {
+        cursor: pointer;
+    }
+    .stages__img {
+        margin-top: 40px;
+        @include _tablet {
+            margin-top: 0;
+        }
+    }
+    .stages__text-bold {
+        @extend %wtb;
+        color: $colorb;
+    }
+    .stages__text {
+        padding-top: 24px;
+        @extend %tib;
+    }
+}
+.result {
+    grid-template-rows: 102px 300px;
+    background-image: url(../../assets/img-google/Rectangle5.jpg);
+    .result__smalltitle {
+        height: 40px;
+        text-align: center;
+        @extend %stb;
+    }
+    .result__container {
+        display: grid;
+        grid-template: 66px 66px 66px/670px 670px;
+        gap: 50px;
+        margin-top: 62px;
+    }
+    .result__block {
+        display: flex;
+        gap: 20px;
+    }
+    .result__img {
+        width: 60px;
+        height: 60px;
+    }
+    .result__text-bold {
+        @extend %tib;
+        font-weight: 700;
+    }
+}
+.clients {
+    height: 906px;
+    background-color: $colorw;
+    display: grid;
+    grid-template: 100px 242px 330px / 1400px;
+    @include _laptop {
+        grid-template: 76px 164px 278px / 944px;
+    }
+    @include _tablet {
+        grid-template: 68px 230px 274px / 688px;
+    }
+    @include _mobile {
+        grid-template: 104px 395px 368px / 288px;
+    }
+    .clients__smalltitle {
+        grid-area: 1/1/2/2;
+        display: flex;
+        @include flex(row, center, flex-start);
+        @extend %stb;
+    }
+    .clients__names {
+        grid-area: 2/1/3/2;
+    }
+    .clients__phone {
+        grid-area: 3/1/4/2;
+        margin-top: 80px;
+        display: grid;
+        grid-template: 100% / 619px 1fr;
+        background-color: $colorbl;
+        height: 324px;
+        border-bottom: 4px solid $colorw;
+        border-radius: 12px;
+        gap: 50px;
+        @include _laptop {
+            margin-top: 60px;
+            grid-template: 100% / 495px 336px;
+            height: 278px;
+            gap: 20px;
+        }
+        @include _tablet {
+            margin-top: 32px;
+            grid-template: 274px / 294px 269px;
+            height: 274px;
+            gap: 21px;
+        }
+        @include _mobile {
+            margin-top: 32px;
+            grid-template: 236px 36px / 100%;
+            height: 368px;
+            gap: 24px;
+        }
+    }
+}
+.clients__names {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(5, 1fr);
+    gap: 20px;
+    @include _tablet {
+        grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    @include _mobile {
+        grid-template: repeat(5, 1fr) / repeat(2, 1fr);
+    }
+    .clients__name-wrapper {
+        display: flex;
+        @include flex(row, center, center);
+        width: 260px;
+        height: 111px;
+        border-radius: 12px;
+        border: 2px solid $colorp;
+        cursor: pointer;
+        @include _laptop {
+            width: 173px;
+            height: 72px;
+        }
+        @include _tablet {
+            width: 164px;
+            height: 68px;
+        }
+        @include _mobile {
+            width: 139px;
+            height: 71px;
+        }
+    }
+    .clients__name {
+        height: 98%;
+    }
+    @include _tablet {
+        height: 80%;
+    }
+    @include _mobile {
+        height: 60%;
+        width: 90%;
+    }
+}
+.clients__phone {
+    .clients__text-wrapper {
+        grid-area: 1/1/2/2;
+    }
+    .clients__number-wrapper {
+        grid-area: 1/2/2/3;
+        @include _mobile {
+            grid-area: 2/1/3/2;
+        }
+    }
+}
+.clients__text-wrapper {
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include _tablet {
+        padding-left: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    @include _mobile {
+        padding-left: 20px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .clients__subtitle {
+        @extend %stw;
+        line-height: 46px;
+        @include _tablet {
+            font-size: 28px;
+            line-height: 36px;
+            width: 294px;
+        }
+        @include _mobile {
+            width: 249px;
+        }
+    }
+    .clients__text {
+        padding-top: 35px;
+        @include font($font1, 26px, $colorw, 400);
+        line-height: 130%;
+        @include _laptop {
+            padding-top: 24px;
+            @include font($font1, 18px, $colorw, 400);
+            line-height: 26px;
+        }
+        @include _mobile {
+            grid-area: 2/1/3/2;
+            padding-top: 18px;
+            @include font($font1, 16px, $colorw, 400);
+            line-height: 24px;
+        }
+    }
+}
+.clients__number-wrapper {
+    grid-area: 1/2/2/3;
+    display: flex;
+    @include flex(row, flex-start, center);
+    @include _mobile {
+        grid-area: 2/1/3/2;
+    }
+    .clients__number {
+        @include font($font1, 68px, $colorw, 700);
+        line-height: 79px;
+        text-decoration-line: underline;
+        @include _laptop {
+            @include font($font1, 40px, $colorw, 700);
+            line-height: 48px;
+        }
+        @include _tablet {
+            @include font($font1, 32px, $colorw, 700);
+            line-height: 40px;
+        }
+        @include _mobile {
+            @include font($font1, 28px, $colorw, 700);
+            line-height: 36px;
+            padding: 20px;
+            position: relative;
+            top: 30px;
+        }
+    }
+}
+footer {
+    grid-area: 3/1/4/2;
+    display: grid;
+    grid-template: 1fr 104px/1fr 1fr;
+    padding: 80px 260px 0px 260px;
+    background-image: url(../../assets/img-about/bg-img-footer.png);
+    @include _laptop {
+        grid-template: 1fr 104px/462px 462px;
+        padding: 60px 40px 0px 40px;
+        width: 1024px;
+    }
+    @include _tablet {
+        grid-template: 1fr 72px/1fr 1fr;
+        padding: 40px 40px 0px 40px;
+        width: 768px;
+        height: 763px;
+        overflow-y: auto;
+    }
+    @include _mobile {
+        height: 1432px;
+        width: 320px;
+        grid-template: 606px 690px 96px / 1fr;
+        padding: 40px 16px 0px 16px;
+        overflow-y: auto;
+        background-image: url(../../assets/img-about/mob-bg-img-footer.png);
+    }
+    .footer__container {
+        grid-area: 1/1/2/2;
+        @include _mobile {
+            grid-area: 2/1/3/2;
+        }
+    }
+    .questions {
+        grid-area: 1/2/2/3;
+        @include _mobile {
+            grid-area: 1/1/2/2;
+        }
+    }
+    .rights {
+        grid-area: 2/1/3/3;
+        width: 311px;
+        @extend %rights;
+        display: flex;
+        align-items: center;
+        @include _tablet {
+            height: 72px;
+        }
+        @include _mobile {
+            grid-area: 3/1/4/2;
+            width: 288px;
+            height: 96px;
+        }
+    }
+}
+.footer__container {
+    display: grid;
+    grid-template: 1fr 320px/680px;
+    @include _tablet {
+        grid-template: 1fr 219px/334px;
+    }
+    @include _mobile {
+        color: 402px 288px/288px;
+    }
+    .contacts {
+        grid-area: 1/1/2/2;
+        display: grid;
+        grid-template: 185px 1fr/1fr 1fr;
+        gap: 40px;
+        @include _laptop {
+            width: 462px;
+        }
+        @include _tablet {
+            grid-template: 190px 60px 80px /100%;
+            width: 334px;
+        }
+        @include _mobile {
+            grid-template: 175px 35px 14px /100%;
+            width: 288px;
+        }
+    }
+    .map {
+        grid-area: 2/1/3/2;
+        .map__item {
+            height: 320px;
+            width: 680px;
+            border-radius: 12px;
+            @include _laptop {
+                width: 462px;
+            }
+            @include _tablet {
+                width: 334px;
+                height: 219px;
+            }
+            @include _mobile {
+                width: 288px;
+                height: 288px;
+                margin-bottom: 96px;
+            }
+        }
+    }
+    .subtitle {
+        @extend %subtitle;
+    }
+}
+.contacts__tel {
+    grid-area: 1/1/2/3;
+    display: flex;
+    @include flex(column, space-between, flex-start);
+    width: 100%;
+    @include _laptop {
+        width: 462px;
+    }
+    @include _tablet {
+        grid-area: 1/1/2/2;
+    }
+    @include _mobile {
+        color: red;
+    }
+    .logo__img {
+        margin-bottom: 35px;
+        @include _tablet {
+            width: 213.134px;
+            height: 60px;
+        }
+        @include _mobile {
+            width: 113.829px;
+            height: 32px;
+            margin-top: 35px;
+        }
+    }
+    .tel__number {
+        display: flex;
+        @include flex(row, space-between, flex-start);
+        @extend %ph;
+        @include _tablet {
+            @include flex(column, flex-end, flex-start);
+        }
+    }
+    .tel__text-bold {
+        width: 360px;
+        @include _laptop {
+            width: 242px;
+        }
+        @include _mobile {
+            color: red;
+        }
+    }
+}
+.contacts__email {
+    grid-area: 2/1/3/2;
+    @include _tablet {
+        grid-area: 2/1/3/2;
+    }
+    .email__link {
+        @extend %trb;
+        color: $colorbl;
+        text-decoration-line: underline;
+    }
+}
+.contacts__address {
+    grid-area: 2/2/3/3;
+    @include _tablet {
+        grid-area: 3/1/4/2;
+        width: 300px;
+    }
+    .address__text {
+        @extend %tib;
+        font-weight: 600;
+    }
+}
+.questions__form-wrapper {
+    width: 680px;
+    height: 690px;
+    padding: 60px;
+    border-radius: 13px;
+    margin-left: 40px;
+    background-color: $colorbl;
+    @extend %placeholder;
+    @include _laptop {
+        width: 462px;
+        height: 691px;
+        margin-left: 20px;
+    }
+    @include _tablet {
+        width: 334px;
+        height: 651px;
+        margin-left: 20px;
+        padding: 40px;
+    }
+    @include _mobile {
+        width: 288px;
+        height: 606px;
+        margin-left: 0px;
+        padding: 40px 20px;
+    }
+}
+.questions__form {
+    grid-area: 1/2/2/3;
+    display: grid;
+    grid-template-rows: 44px 46px 60px 60px 60px 120px 60px;
+    gap: 20px;
+    @include _laptop {
+        grid-template-rows: 36px 24px 60px 60px 60px 120px 128px;
+        width: 342px;
+        height: 572px;
+        gap: 12px;
+    }
+    @include _tablet {
+        grid-template-rows: 36px 24px 60px 60px 60px 120px 152px;
+        width: 254px;
+        height: 572px;
+    }
+    @include _mobile {
+        grid-template-rows: 36px 24px 48px 48px 48px 120px 152px;
+        width: 254px;
+        height: 572px;
+        gap: 9px;
+    }
+    .questions__smalltitle {
+        grid-area: 1/1/2/2;
+        @extend %stw;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 248px;
+        }
+    }
+    .questions__text {
+        grid-area: 2/1/3/2;
+        @extend %tiw;
+        @include _laptop {
+            width: 342px;
+            margin-top: 4px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 248px;
+        }
+    }
+    .form-control_1 {
+        grid-area: 3/1/4/2;
+        @extend %inputblock;
+        @include _laptop {
+            width: 342px;
+            height: 60px;
+            padding: 18px 26px 18px 32px;
+            align-items: center;
+        }
+        @include _tablet {
+            width: 254px;
+            height: 60px;
+            padding: 18px 18px 18px 32px;
+        }
+        @include _mobile {
+            width: 248px;
+            height: 48px;
+            padding: 12px 15px 12px 22px;
+        }
+    }
+    .form-control_2 {
+        grid-area: 4/1/5/2;
+        @extend %inputblock;
+        @include _laptop {
+            width: 342px;
+            height: 60px;
+            padding: 18px 26px 18px 32px;
+            align-items: center;
+        }
+        @include _tablet {
+            width: 254px;
+            height: 60px;
+            padding: 18px 18px 18px 32px;
+        }
+        @include _mobile {
+            width: 248px;
+            height: 48px;
+            padding: 12px 15px 12px 22px;
+        }
+    }
+    .form__phone {
+        grid-area: 5/1/6/2;
+        display: flex;
+        align-items: center;
+        @extend %placeholder;
+        @extend %inputblock;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 248px;
+            height: 48px;
+        }
+        .form__img {
+            height: 20px;
+            width: 36px;
+        }
+        .form-control_3 {
+            @extend %inputblock;
+            border: transparent;
+            width: 342px;
+        }
+    }
+    .form-control_4 {
+        grid-area: 6/1/7/2;
+        @extend %inputblock;
+        height: 120px;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 248px;
+            padding: 12px 15px 12px 22px;
+        }
+    }
+    .form__btn {
+        display: flex;
+        width: 208px;
+        height: 60px;
+        padding: 18px 42px;
+        @include flex(row, center, center);
+        border-radius: 12px;
+        border: none;
+        background-color: $colorw;
+        @include font($font1, 16px, $colorbl, 700);
+        line-height: 24px;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+            height: 60px;
+            padding: 18px 65px;
+        }
+        @include _mobile {
+            width: 248px;
+            height: 48px;
+            padding: 18px 82px;
+        }
+        .form__arrow {
+            padding-left: 22px;
+        }
+    }
+    .form__item {
+        grid-area: 7/1/8/2;
+        display: flex;
+        @include flex(row, space-between, center);
+        @include _laptop {
+            @include flex(column, space-between, center);
+        }
+        @include _tablet {
+            @include flex(column, space-between, center);
+            width: 254px;
+        }
+        @include _mobile {
+            color: red;
+        }
+    }
+    .form__chbox-wrapper {
+        width: 332px;
+        gap: 10px;
+        display: flex;
+        @include flex(row, flex-start, center);
+        @include _tablet {
+            width: 254px;
+        }
+    }
+    .form__chbox {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        border-color: $colorp;
+        background-color: $colorbl;
+    }
+    .form__agr {
+        display: flex;
+        @include flex(column, flex-start, center);
+    }
+    .form__text {
+        @extend %rights;
+        color: $colorp;
+        margin: 0;
+    }
+    .textlink {
+        color: $colorp;
+        text-decoration: underline;
+    }
+}

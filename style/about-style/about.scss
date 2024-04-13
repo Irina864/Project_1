@@ -1,0 +1,1138 @@
+@import "../vars";
+@import "../template";
+body {
+    max-width: 1920px;
+    display: grid;
+    grid-template-rows: 496px 1fr 894px;
+    @include _laptop {
+        grid-template-rows: 496px 1fr 855px;
+    }
+    @include _tablet {
+        grid-template-rows: 340px 1fr 763px;
+    }
+    @include _mobile {
+        grid-template-rows: 376px 1fr 1432px;
+    }
+    header {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 96px 1fr;
+        background-image: url(../../assets/img-about/bg-img-header.png);
+        @include _laptop {
+            grid-template-rows: 80px 1fr;
+            max-width: 1024px;
+        }
+        @include _tablet {
+            max-width: 768px;
+        }
+        @include _mobile {
+            grid-template-rows: 60px 1fr;
+            max-width: 320px;
+        }
+    }
+}
+header {
+    .header__top-wrapper {
+        display: grid;
+        grid-template-columns: 201px 756px 586px 377px;
+        @include _laptop {
+            grid-template-columns: 153.83px 1fr 1fr 375px;
+            background-color: $colorw;
+        }
+        @include _mobile {
+            grid-template-columns: 129.83px 1fr 1fr 95px;
+        }
+    }
+    .header__logo-wrapper {
+        padding: 24px 30px 24px 30px;
+        grid-area: 1/1/2/2;
+        @include _laptop {
+            padding: 24px 18px 24px 40px;
+        }
+        @include _mobile {
+            padding: 14px 40px 14px 16px;
+        }
+        .whlogo {
+            padding: 24px, 30px;
+            width: 170.743px;
+            height: 48px;
+            @include _laptop {
+                display: none;
+            }
+        }
+        .dlogo {
+            display: none;
+            @include _laptop {
+                display: inline-block;
+                width: 113.829px;
+                height: 32px;
+            }
+        }
+    }
+    .header__nav {
+        padding: 0;
+        grid-area: 1/3/2/4;
+        display: flex;
+        @include flex(row, space-between, center);
+        @include _laptop {
+            display: none;
+        }
+        .nav__link {
+            line-height: 96px;
+            @include font($font1, 16px, $colorp, 500);
+        }
+        .link_active {
+            color: $colorw;
+            border-bottom: 4px solid $colorw;
+        }
+    }
+    .buttons {
+        padding: 24px 30px 24px 60px;
+        grid-area: 1/4/2/5;
+        display: flex;
+        @include flex(row, space-between, center);
+        gap: 24px;
+        @include _laptop {
+            padding: 0px 40px 0px 0px;
+        }
+        .buttons__connect {
+            width: 197px;
+            padding: 14px 0px;
+            border: 1px solid $colorw;
+            @extend %btn-top;
+            background-color: transparent;
+            border-radius: 12px;
+            @include _laptop {
+                color: $colorbl;
+                border: 1px solid $colorbl;
+            }
+            @include _mobile {
+                display: none;
+            }
+        }
+        .buttons__language {
+            width: 66px;
+            padding: 14px 0px;
+            border: 1px solid $colorp;
+            @extend %btn-top;
+            color: $colorp;
+            background-color: transparent;
+            border-radius: 12px;
+            @include _laptop {
+                color: $colorbl;
+            }
+            @include _mobile {
+                display: none;
+            }
+        }
+    }
+    .burger {
+        display: none;
+        @include _laptop {
+            display: block;
+        }
+    }
+    .header__title-wrapper {
+        width: 560px;
+        height: 79px;
+        margin-left: 260px;
+        margin-top: 118.5px;
+        @include _laptop {
+            width: 560px;
+            height: 79px;
+            margin-left: 40px;
+            margin-top: 140.5px;
+        }
+        @include _tablet {
+            height: 56px;
+            margin-top: 76px;
+        }
+        @include _mobile {
+            width: 288px;
+            height: 40px;
+            margin-left: 16px;
+            margin-top: 40px;
+        }
+    }
+    .header__title {
+        width: 100%;
+        @extend %h1;
+        margin: 0;
+    }
+    .header__text {
+        @include font($font2, 20px, $colorw, 400);
+        line-height: 28px;
+        margin-top: 28px;
+        @include _tablet {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        @include _mobile {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+.main {
+    grid-area: 2/1/3/2;
+    display: grid;
+    grid-template-rows: 688px 860px 328px 906px;
+    @include _laptop {
+        grid-template-rows: 544px 716px 280px 698px;
+    }
+    @include _tablet {
+        grid-template-rows: 578px 732px 350px 678px;
+    }
+    @include _mobile {
+        grid-template-rows: 1052px 1000px 506px 979px;
+    }
+    .team {
+        grid-area: 1/1/2/2;
+        background-image: url(../../assets/img-about/bg-img-main.png);
+    }
+    .reasons {
+        grid-area: 2/1/3/2;
+        background-color: $colorw;
+    }
+    .numbers {
+        grid-area: 3/1/4/2;
+        background-color: $colort;
+    }
+    .clients {
+        grid-area: 4/1/5/2;
+        background-color: $colorw;
+    }
+}
+.team {
+    background-image: url(../../assets/img-about/bg-img-main.png);
+    display: grid;
+    grid-template: 68px 156px 116px 56px/ 100%;
+    gap: 40px;
+    @include _laptop {
+        grid-template-rows: 52px 136px 80px 72px;
+        gap: 24px;
+        width: 1024px;
+    }
+    @include _tablet {
+        grid-template-rows: 78px 176px 104px 72px;
+        width: 786px;
+    }
+    @include _mobile {
+        grid-template-rows: 208px 360px 184px 192px;
+        gap: 20px;
+        width: 320px;
+    }
+    .team__phrase {
+        grid-area: 1/1/2/2;
+        color: $colorb;
+        @extend %wtb;
+        @include _laptop {
+            width: 944px;
+        }
+        @include _tablet {
+            width: 688px;
+        }
+        @include _mobile {
+            width: 288px;
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+    .team__services-wrapper {
+        grid-area: 2/1/3/2;
+        @extend %tib;
+        grid-area: 2/1/3/2;
+        gap: 4px;
+        @include _laptop {
+            width: 944px;
+        }
+        @include _tablet {
+            width: 688px;
+        }
+        @include _mobile {
+            width: 288px;
+        }
+        .team__services-list {
+            padding-left: 25px;
+        }
+        .item-center {
+            padding: 5px 0;
+        }
+    }
+    .team__attention-wrapper {
+        grid-area: 3/1/4/2;
+        display: flex;
+        @include flex(column, flex-start, flex-start);
+        @extend %tib;
+        .team__attention {
+            border-radius: 12px;
+            border: 1px solid $colorp;
+            background: $bcg_y;
+            padding: 30px;
+            @include _laptop {
+                padding: 16px;
+                width: 944px;
+                height: 80px;
+            }
+            @include _tablet {
+                width: 688px;
+                height: 104px;
+            }
+            @include _mobile {
+                padding: 20px;
+                width: 288px;
+                height: 184px;
+            }
+        }
+    }
+    .team__text {
+        grid-area: 4/1/5/2;
+        @extend %tib;
+        @include _laptop {
+            width: 944px;
+        }
+        @include _tablet {
+            width: 688px;
+        }
+        @include _mobile {
+            width: 288px;
+        }
+    }
+}
+.reasons {
+    display: grid;
+    grid-template-columns: 1fr 680px;
+    gap: 36px;
+    @include _laptop {
+        grid-template-rows: 1fr 462px;
+        gap: 20px;
+        width: 1024px;
+    }
+    @include _tablet {
+        grid-template-rows: 334px 334px;
+        padding: 60px 40px;
+    }
+    @include _mobile {
+        grid-template-columns: 288px 612px;
+        gap: 10px;
+        padding: 40px 16px;
+    }
+    .reasons__img-wrapper {
+        grid-area: 1/1/2/2;
+        display: flex;
+        @include flex(row, center, center);
+        width: 680px;
+        img {
+            width: 100%;
+        }
+        @include _laptop {
+            padding: 72px 0;
+            width: 462px;
+        }
+        @include _tablet {
+            padding: 139px 0;
+            width: 334px;
+            height: 612px;
+        }
+        @include _mobile {
+            width: 286px;
+            height: 286px;
+            padding: 0;
+        }
+    }
+    .reasons_text-wrapper {
+        grid-area: 1/2/2/3;
+        @include _mobile {
+            grid-area: 2/1/3/2;
+        }
+        .reasons__title {
+            padding-bottom: 40px;
+            @extend %stb;
+            border-bottom: 1px solid $colorp;
+            @include _laptop {
+                width: 462px;
+            }
+            @include _tablet {
+                width: 334px;
+                padding-bottom: 32px;
+            }
+            @include _mobile {
+                width: 288px;
+            }
+        }
+        .reasons__benefits-wrapper {
+            display: grid;
+            grid-template-rows: 164px repeat(6, 69px);
+            @include _laptop {
+                grid-template: 140px repeat(6, 56px) / 462px;
+            }
+            @include _tablet {
+                grid-template: 132px repeat(6, 56px) / 334px;
+            }
+            @include _mobile {
+                grid-template: 154px repeat(6, 48px) / 288px;
+            }
+        }
+    }
+    .reason__benefit-wrapper {
+        display: grid;
+        grid-template: 100% / 6% 1fr;
+        border-bottom: 1px solid $colorp;
+        @include _laptop {
+            grid-template: 100% / 45px 1fr;
+        }
+        @include _tablet {
+            grid-template: 100% / 48px 1fr;
+        }
+        @include _mobile {
+            grid-template: 100% /40px 1fr;
+        }
+        .benefit__plusminus {
+            grid-area: 1/1/2/2;
+            display: flex;
+            @include flex(row, flex-start, center);
+            cursor: pointer;
+        }
+        .benefit__title {
+            grid-area: 1/2/2/3;
+            @extend %tib;
+            font-weight: 700;
+            display: flex;
+            @include flex(row, flex-start, center);
+            cursor: pointer;
+        }
+        .benefit__minus {
+            display: none;
+        }
+        .minus_active {
+            display: block;
+        }
+    }
+    .reason__benefit-wrapper:first-child {
+        .benefit__plusminus,
+        .benefit__title {
+            @include flex(row, flex-start, flex-start);
+            margin-top: 20px;
+            @include _laptop {
+                margin-top: 16px;
+            }
+            @include _mobile {
+                margin-top: 12px;
+            }
+        }
+        .benefit__text-wrapper {
+            grid-area: 1/2/2/3;
+        }
+        .benefit__text {
+            padding: 0;
+            @extend %tib;
+            color: $colort;
+            padding-top: 60px;
+            @include _laptop {
+                width: 290px;
+                padding-top: 35px;
+            }
+            @include _mobile {
+                margin-top: 0px;
+                width: 256px;
+            }
+        }
+    }
+}
+.numbers {
+    display: grid;
+    grid-template-columns: 800px 1fr;
+    gap: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    @include _laptop {
+        grid-template-columns: 495px 409px;
+        width: 1024px;
+        gap: 60;
+    }
+    @include _tablet {
+        grid-template-rows: 100px 98px;
+        gap: 32px;
+        padding: 40px 40px 80px 40px;
+        width: 768px;
+        @include _mobile {
+            grid-template-rows: 180px 180px;
+            width: 320px;
+            padding: 40px 16px;
+        }
+    }
+    .numbers__text-wrapper {
+        grid-area: 1/1/2/2;
+        display: flex;
+        @include flex(column, space-between, flex-start);
+        padding: 98px 0;
+        gap: 24px;
+        @include _laptop {
+            padding: 84px 0;
+            height: 280px;
+        }
+        @include _tablet {
+            grid-area: 1/1/2/2;
+            padding: 0;
+            width: 688px;
+            height: 100px;
+        }
+        @include _mobile {
+            padding: 0;
+            width: 288px;
+            height: 72px;
+        }
+        .numbers__title {
+            @extend %stb;
+            color: $colorw;
+        }
+        .numbers__text {
+            @include font($font1, 26px, $colorw, 400);
+            line-height: 130%;
+            @include _laptop {
+                font-size: 18px;
+                line-height: 26px;
+            }
+            @include _tablet {
+                width: 688px;
+            }
+            @include _mobile {
+                width: 288px;
+            }
+        }
+    }
+    .numbers__results {
+        grid-area: 1/2/2/3;
+        display: flex;
+        @include flex(row, space-between, flex-start);
+        padding: 80px 0;
+        gap: 80px;
+        @include _laptop {
+            padding: 60px 0;
+            height: 280px;
+            gap: 40px;
+        }
+        @include _tablet {
+            grid-area: 2/1/3/2;
+            padding: 0;
+        }
+        @include _mobile {
+            grid-area: 2/1/3/2;
+            flex-wrap: wrap;
+            width: 320px;
+            height: 200px;
+            padding: 0;
+            @include flex(row, flex-start, flex-start);
+            gap: 5px;
+        }
+        .results__title {
+            @include font($font1, 68px, $colorw, 700);
+            line-height: 88.4px;
+            @include _tablet {
+                font-size: 48px;
+                line-height: 62.4px;
+            }
+            @include _mobile {
+                grid-area: 2/1/3/2;
+            }
+        }
+        .results__text {
+            padding-top: 8px;
+            @extend %tiw;
+            @include _tablet {
+                width: 191px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+            @include _mobile {
+                width: 120px;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        .result-last {
+            @include _mobile {
+                width: 290px;
+            }
+        }
+    }
+}
+.clients {
+    height: 906px;
+    background-color: $colorw;
+    display: grid;
+    grid-template: 100px 242px 330px / 1400px;
+    @include _laptop {
+        grid-template: 76px 164px 278px / 944px;
+    }
+    @include _tablet {
+        grid-template: 68px 230px 274px / 688px;
+    }
+    @include _mobile {
+        grid-template: 104px 395px 368px / 288px;
+    }
+    .clients__smalltitle {
+        grid-area: 1/1/2/2;
+        display: flex;
+        @include flex(row, center, flex-start);
+        @extend %stb;
+    }
+    .clients__names {
+        grid-area: 2/1/3/2;
+    }
+    .clients__phone {
+        grid-area: 3/1/4/2;
+        margin-top: 80px;
+        display: grid;
+        grid-template: 100% / 619px 1fr;
+        background-color: $colorbl;
+        height: 324px;
+        border-bottom: 4px solid $colorw;
+        border-radius: 12px;
+        gap: 50px;
+        @include _laptop {
+            margin-top: 60px;
+            grid-template: 100% / 495px 336px;
+            height: 278px;
+            gap: 20px;
+        }
+        @include _tablet {
+            margin-top: 32px;
+            grid-template: 274px / 294px 269px;
+            height: 274px;
+            gap: 21px;
+        }
+        @include _mobile {
+            margin-top: 32px;
+            grid-template: 236px 36px / 100%;
+            height: 368px;
+            gap: 24px;
+        }
+    }
+}
+.clients__names {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(5, 1fr);
+    gap: 20px;
+    @include _tablet {
+        grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    @include _mobile {
+        grid-template: repeat(5, 1fr) / repeat(2, 1fr);
+    }
+    .clients__name-wrapper {
+        display: flex;
+        @include flex(row, center, center);
+        width: 260px;
+        height: 111px;
+        border-radius: 12px;
+        border: 2px solid $colorp;
+        cursor: pointer;
+        @include _laptop {
+            width: 173px;
+            height: 72px;
+        }
+        @include _tablet {
+            width: 164px;
+            height: 68px;
+        }
+        @include _mobile {
+            width: 139px;
+            height: 71px;
+        }
+    }
+    .clients__name {
+        height: 98%;
+    }
+    @include _tablet {
+        height: 80%;
+    }
+    @include _mobile {
+        height: 60%;
+        width: 90%;
+    }
+}
+.clients__phone {
+    .clients__text-wrapper {
+        grid-area: 1/1/2/2;
+    }
+    .clients__number-wrapper {
+        grid-area: 1/2/2/3;
+        @include _mobile {
+            grid-area: 2/1/3/2;
+        }
+    }
+}
+.clients__text-wrapper {
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include _tablet {
+        padding-left: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    @include _mobile {
+        padding-left: 20px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .clients__subtitle {
+        @extend %stw;
+        line-height: 46px;
+        @include _tablet {
+            font-size: 28px;
+            line-height: 36px;
+            width: 294px;
+        }
+        @include _mobile {
+            width: 249px;
+        }
+    }
+    .clients__text {
+        padding-top: 35px;
+        @include font($font1, 26px, $colorw, 400);
+        line-height: 130%;
+        @include _laptop {
+            padding-top: 24px;
+            @include font($font1, 18px, $colorw, 400);
+            line-height: 26px;
+        }
+        @include _mobile {
+            grid-area: 2/1/3/2;
+            padding-top: 18px;
+            @include font($font1, 16px, $colorw, 400);
+            line-height: 24px;
+        }
+    }
+}
+.clients__number-wrapper {
+    grid-area: 1/2/2/3;
+    display: flex;
+    @include flex(row, flex-start, center);
+    @include _mobile {
+        grid-area: 2/1/3/2;
+    }
+    .clients__number {
+        @include font($font1, 68px, $colorw, 700);
+        line-height: 79px;
+        text-decoration-line: underline;
+        @include _laptop {
+            @include font($font1, 40px, $colorw, 700);
+            line-height: 48px;
+        }
+        @include _tablet {
+            @include font($font1, 32px, $colorw, 700);
+            line-height: 40px;
+        }
+        @include _mobile {
+            @include font($font1, 28px, $colorw, 700);
+            line-height: 36px;
+            padding: 20px;
+            position: relative;
+            top: 30px;
+        }
+    }
+}
+footer {
+    grid-area: 3/1/4/2;
+    display: grid;
+    grid-template: 1fr 104px/1fr 1fr;
+    padding: 80px 260px 0px 260px;
+    background-image: url(../../assets/img-about/bg-img-footer.png);
+    @include _laptop {
+        grid-template: 1fr 104px/462px 462px;
+        padding: 60px 40px 0px 40px;
+        width: 1024px;
+    }
+    @include _tablet {
+        grid-template: 1fr 72px/1fr 1fr;
+        padding: 40px 40px 0px 40px;
+        width: 768px;
+        height: 763px;
+        overflow-y: auto;
+    }
+    @include _mobile {
+        height: 1432px;
+        width: 320px;
+        grid-template: 606px 690px 96px / 1fr;
+        padding: 40px 16px 0px 16px;
+        overflow-y: auto;
+        background-image: url(../../assets/img-about/mob-bg-img-footer.png);
+    }
+    .footer__container {
+        grid-area: 1/1/2/2;
+        @include _mobile {
+            grid-area: 2/1/3/2;
+        }
+    }
+    .questions {
+        grid-area: 1/2/2/3;
+        @include _mobile {
+            grid-area: 1/1/2/2;
+        }
+    }
+    .rights {
+        grid-area: 2/1/3/3;
+        width: 311px;
+        @extend %rights;
+        display: flex;
+        align-items: center;
+        @include _tablet {
+            height: 72px;
+        }
+        @include _mobile {
+            grid-area: 3/1/4/2;
+            width: 288px;
+            height: 96px;
+        }
+    }
+}
+.footer__container {
+    display: grid;
+    grid-template: 1fr 320px/680px;
+    @include _tablet {
+        grid-template: 1fr 219px/334px;
+    }
+    @include _mobile {
+        color: 402px 288px/288px;
+    }
+    .contacts {
+        grid-area: 1/1/2/2;
+        display: grid;
+        grid-template: 185px 1fr/1fr 1fr;
+        gap: 40px;
+        @include _laptop {
+            width: 462px;
+        }
+        @include _tablet {
+            grid-template: 190px 60px 80px /100%;
+            width: 334px;
+        }
+        @include _mobile {
+            grid-template: 175px 35px 14px /100%;
+            width: 288px;
+        }
+    }
+    .map {
+        grid-area: 2/1/3/2;
+        .map__item {
+            height: 320px;
+            width: 680px;
+            border-radius: 12px;
+            @include _laptop {
+                width: 462px;
+            }
+            @include _tablet {
+                width: 334px;
+                height: 219px;
+            }
+            @include _mobile {
+                width: 288px;
+                height: 288px;
+                margin-bottom: 96px;
+            }
+        }
+    }
+    .subtitle {
+        @extend %subtitle;
+    }
+}
+.contacts__tel {
+    grid-area: 1/1/2/3;
+    display: flex;
+    @include flex(column, space-between, flex-start);
+    width: 100%;
+    @include _laptop {
+        width: 462px;
+    }
+    @include _tablet {
+        grid-area: 1/1/2/2;
+    }
+    @include _mobile {
+        color: red;
+    }
+    .logo__img {
+        margin-bottom: 35px;
+        @include _tablet {
+            width: 213.134px;
+            height: 60px;
+        }
+        @include _mobile {
+            width: 113.829px;
+            height: 32px;
+            margin-top: 35px;
+        }
+    }
+    .tel__number {
+        display: flex;
+        @include flex(row, space-between, flex-start);
+        @extend %ph;
+        @include _tablet {
+            @include flex(column, flex-end, flex-start);
+        }
+    }
+    .tel__text-bold {
+        width: 360px;
+        @include _laptop {
+            width: 242px;
+        }
+        @include _mobile {
+            color: red;
+        }
+    }
+}
+.contacts__email {
+    grid-area: 2/1/3/2;
+    @include _tablet {
+        grid-area: 2/1/3/2;
+    }
+    .email__link {
+        @extend %trb;
+        color: $colorbl;
+        text-decoration-line: underline;
+    }
+}
+.contacts__address {
+    grid-area: 2/2/3/3;
+    @include _tablet {
+        grid-area: 3/1/4/2;
+        width: 300px;
+    }
+    .address__text {
+        @extend %tib;
+        font-weight: 600;
+    }
+}
+.questions__form-wrapper {
+    width: 680px;
+    height: 690px;
+    padding: 60px;
+    border-radius: 13px;
+    margin-left: 40px;
+    background-color: $colorbl;
+    @extend %placeholder;
+    @include _laptop {
+        width: 462px;
+        height: 691px;
+        margin-left: 20px;
+    }
+    @include _tablet {
+        width: 334px;
+        height: 651px;
+        margin-left: 20px;
+        padding: 40px;
+    }
+    @include _mobile {
+        width: 288px;
+        height: 606px;
+        margin-left: 0px;
+        padding: 40px 20px;
+    }
+}
+.questions__form {
+    grid-area: 1/2/2/3;
+    display: grid;
+    grid-template-rows: 44px 46px 60px 60px 60px 120px 60px;
+    gap: 20px;
+    @include _laptop {
+        grid-template-rows: 36px 24px 60px 60px 60px 120px 128px;
+        width: 342px;
+        height: 572px;
+        gap: 12px;
+    }
+    @include _tablet {
+        grid-template-rows: 36px 24px 60px 60px 60px 120px 152px;
+        width: 254px;
+        height: 572px;
+    }
+    @include _mobile {
+        grid-template-rows: 36px 24px 48px 48px 48px 120px 152px;
+        width: 254px;
+        height: 572px;
+        gap: 9px;
+    }
+    .questions__smalltitle {
+        grid-area: 1/1/2/2;
+        @extend %stw;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 248px;
+        }
+    }
+    .questions__text {
+        grid-area: 2/1/3/2;
+        @extend %tiw;
+        @include _laptop {
+            width: 342px;
+            margin-top: 4px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 248px;
+        }
+    }
+    .form-control_1 {
+        grid-area: 3/1/4/2;
+        @extend %inputblock;
+        @include _laptop {
+            width: 342px;
+            height: 60px;
+            padding: 18px 26px 18px 32px;
+            align-items: center;
+        }
+        @include _tablet {
+            width: 254px;
+            height: 60px;
+            padding: 18px 18px 18px 32px;
+        }
+        @include _mobile {
+            width: 248px;
+            height: 48px;
+            padding: 12px 15px 12px 22px;
+        }
+    }
+    .form-control_2 {
+        grid-area: 4/1/5/2;
+        @extend %inputblock;
+        @include _laptop {
+            width: 342px;
+            height: 60px;
+            padding: 18px 26px 18px 32px;
+            align-items: center;
+        }
+        @include _tablet {
+            width: 254px;
+            height: 60px;
+            padding: 18px 18px 18px 32px;
+        }
+        @include _mobile {
+            width: 248px;
+            height: 48px;
+            padding: 12px 15px 12px 22px;
+        }
+    }
+    .form__phone {
+        grid-area: 5/1/6/2;
+        display: flex;
+        align-items: center;
+        @extend %placeholder;
+        @extend %inputblock;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 248px;
+            height: 48px;
+        }
+        .form__img {
+            height: 20px;
+            width: 36px;
+        }
+        .form-control_3 {
+            @extend %inputblock;
+            border: transparent;
+            width: 342px;
+        }
+    }
+    .form-control_4 {
+        grid-area: 6/1/7/2;
+        @extend %inputblock;
+        height: 120px;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+        }
+        @include _mobile {
+            width: 248px;
+            padding: 12px 15px 12px 22px;
+        }
+    }
+    .form__btn {
+        display: flex;
+        width: 208px;
+        height: 60px;
+        padding: 18px 42px;
+        @include flex(row, center, center);
+        border-radius: 12px;
+        border: none;
+        background-color: $colorw;
+        @include font($font1, 16px, $colorbl, 700);
+        line-height: 24px;
+        @include _laptop {
+            width: 342px;
+        }
+        @include _tablet {
+            width: 254px;
+            height: 60px;
+            padding: 18px 65px;
+        }
+        @include _mobile {
+            width: 248px;
+            height: 48px;
+            padding: 18px 82px;
+        }
+        .form__arrow {
+            padding-left: 22px;
+        }
+    }
+    .form__item {
+        grid-area: 7/1/8/2;
+        display: flex;
+        @include flex(row, space-between, center);
+        @include _laptop {
+            @include flex(column, space-between, center);
+        }
+        @include _tablet {
+            @include flex(column, space-between, center);
+            width: 254px;
+        }
+        @include _mobile {
+            color: red;
+        }
+    }
+    .form__chbox-wrapper {
+        width: 332px;
+        gap: 10px;
+        display: flex;
+        @include flex(row, flex-start, center);
+        @include _tablet {
+            width: 254px;
+        }
+    }
+    .form__chbox {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        border-color: $colorp;
+        background-color: $colorbl;
+    }
+    .form__agr {
+        display: flex;
+        @include flex(column, flex-start, center);
+    }
+    .form__text {
+        @extend %rights;
+        color: $colorp;
+        margin: 0;
+    }
+    .textlink {
+        color: $colorp;
+        text-decoration: underline;
+    }
+}
